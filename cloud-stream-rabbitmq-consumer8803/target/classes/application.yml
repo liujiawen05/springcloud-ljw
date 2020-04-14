@@ -1,0 +1,33 @@
+server:
+  port: 8803
+
+spring:
+  application:
+    name: cloud-stream-consumer
+  cloud:
+    stream:
+      binders: # 在此处配置要绑定的rabbitMQ的服务信息
+        defaultRabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbit:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings:
+        input:
+          destination: studyExchange
+          content-type: application/json
+          binder: defaultRabbit
+          group: liujiawenA
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2 # 设置心跳的间隔时间，默认30
+    lease-expiration-duration-in-seconds: 5 # 超过5秒间隔，默认90
+    instance-id: receive-8803.com #主机名
+    prefer-ip-address: true # 显示ip
