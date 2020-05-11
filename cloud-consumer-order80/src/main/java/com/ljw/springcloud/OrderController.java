@@ -53,4 +53,9 @@ public class OrderController {
         }
     }
 
+    @GetMapping("/consumer/ipfCcmOriginPage/get/{id}")
+    public CommonResult<Payment> getIpfCcmOriginPage(@PathVariable("id") Long id) {
+        return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
+    }
+
 }

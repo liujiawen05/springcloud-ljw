@@ -53,4 +53,25 @@
         </dependency>
     </dependencies>
 
+<!--    <build>-->
+<!--        &lt;!&ndash;插件配置&ndash;&gt;-->
+<!--        <pluginManagement>-->
+<!--            <plugins>-->
+<!--                &lt;!&ndash; mybatis generator 自动生成代码插件 &ndash;&gt;-->
+<!--                <plugin>-->
+<!--                    <groupId>org.mybatis.generator</groupId>-->
+<!--                    <artifactId>mybatis-generator-maven-plugin</artifactId>-->
+<!--                    <version>1.3.5</version>-->
+<!--                    <configuration>-->
+<!--                        &lt;!&ndash;配置文件的位置&ndash;&gt;-->
+<!--                        <configurationFile>src/main/resources/generatorConfig.xml</configurationFile>-->
+<!--                        <overwrite>true</overwrite>-->
+<!--                        <verbose>true</verbose>-->
+<!--                    </configuration>-->
+<!--                </plugin>-->
+<!--            </plugins>-->
+<!--        </pluginManagement>-->
+<!--    </build>-->
+
+
 </project>

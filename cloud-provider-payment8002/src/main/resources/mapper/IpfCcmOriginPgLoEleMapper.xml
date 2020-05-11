@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ljw.springcloud.dao.IpfCcmOriginPgLoEleMapper" >
+  <resultMap id="BaseResultMap" type="com.ljw.springcloud.entity.IpfCcmOriginPgLoEle" >
+    <id column="IPF_CCM_OR_PG_LO_ELE_ID" property="ipfCcmOrPgLoEleId" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE_ID" property="dataSourceId" jdbcType="VARCHAR" />
+    <result column="IS_ZERO_FILL" property="isZeroFill" jdbcType="CHAR" />
+    <result column="LAYOUT_ELEMENT_ATTR" property="layoutElementAttr" jdbcType="VARCHAR" />
+    <result column="LABEL_TEXT" property="labelText" jdbcType="VARCHAR" />
+    <result column="DOMAIN_MODEL" property="domainModel" jdbcType="VARCHAR" />
+    <result column="DROPDOWN_LIST" property="dropdownList" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="CREATE_OFFICE" property="createOffice" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME_ZONE" property="createTimeZone" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFYOR" property="lastModifyor" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFY_OFFICE" property="lastModifyOffice" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFY_TIME" property="lastModifyTime" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFY_TIME_ZONE" property="lastModifyTimeZone" jdbcType="VARCHAR" />
+    <result column="RECORD_VERSION" property="recordVersion" jdbcType="DECIMAL" />
+    <result column="PRINCIPAL_GROUP_CODE" property="principalGroupCode" jdbcType="VARCHAR" />
+    <result column="IPF_CCM_ORIGIN_PAGE_LAYOUT_ID" property="ipfCcmOriginPageLayoutId" jdbcType="VARCHAR" />
+    <result column="CONFIG_ITEM_CODE" property="configItemCode" jdbcType="VARCHAR" />
+    <result column="REVISION_NUMBER" property="revisionNumber" jdbcType="DECIMAL" />
+    <result column="BASE_VIEW_ID" property="baseViewId" jdbcType="VARCHAR" />
+    <result column="SOURCE_REVISION_NUMBER" property="sourceRevisionNumber" jdbcType="DECIMAL" />
+    <result column="SEQ_NO" property="seqNo" jdbcType="DECIMAL" />
+    <result column="LAYOUT_ELEMENT_TYPE" property="layoutElementType" jdbcType="VARCHAR" />
+    <result column="LAYOUT_ORIGIN_NAME" property="layoutOriginName" jdbcType="VARCHAR" />
+    <result column="CONTROL_HEIGHT" property="controlHeight" jdbcType="DECIMAL" />
+    <result column="CONTROL_WIDTH" property="controlWidth" jdbcType="DECIMAL" />
+    <result column="TEXT_LINE_NUM" property="textLineNum" jdbcType="DECIMAL" />
+    <result column="CONTROL_CONNECTOR" property="controlConnector" jdbcType="VARCHAR" />
+    <result column="IS_NOT_NULL" property="isNotNull" jdbcType="CHAR" />
+    <result column="IS_READ_ONLY" property="isReadOnly" jdbcType="CHAR" />
+    <result column="UI_TYPE" property="uiType" jdbcType="VARCHAR" />
+    <result column="IS_VISIBLE" property="isVisible" jdbcType="CHAR" />
+    <result column="COLUMN_STYLE" property="columnStyle" jdbcType="VARCHAR" />
+    <result column="LABLE_STYLE" property="lableStyle" jdbcType="VARCHAR" />
+    <result column="IS_SHOW_LABLE" property="isShowLable" jdbcType="CHAR" />
+    <result column="IS_INLINE" property="isInline" jdbcType="CHAR" />
+    <result column="TAB_INDEX" property="tabIndex" jdbcType="DECIMAL" />
+    <result column="DEFAULT_VALUE" property="defaultValue" jdbcType="VARCHAR" />
+    <result column="DEFAULT_VALUE2" property="defaultValue2" jdbcType="VARCHAR" />
+    <result column="INIT_VALUE_TYPE" property="initValueType" jdbcType="VARCHAR" />
+    <result column="INIT_VALUE_TYPE2" property="initValueType2" jdbcType="VARCHAR" />
+    <result column="CORRECT_TYPE" property="correctType" jdbcType="VARCHAR" />
+    <result column="CONDITION_TYPE" property="conditionType" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="QUERY_TYPE" property="queryType" jdbcType="VARCHAR" />
+    <result column="RANGE_TYPE" property="rangeType" jdbcType="VARCHAR" />
+    <result column="METHOD_NAME" property="methodName" jdbcType="VARCHAR" />
+    <result column="PROPERTY_NAME" property="propertyName" jdbcType="VARCHAR" />
+    <result column="FORMAT_EXPRESS" property="formatExpress" jdbcType="VARCHAR" />
+    <result column="METHOD_ORIGIN_NAME" property="methodOriginName" jdbcType="VARCHAR" />
+    <result column="SOURCE_PK_ID" property="sourcePkId" jdbcType="VARCHAR" />
+    <result column="IS_FOCUS" property="isFocus" jdbcType="CHAR" />
+    <result column="FIELD_VALUE" property="fieldValue" jdbcType="VARCHAR" />
+    <result column="FIELD_CODE" property="fieldCode" jdbcType="VARCHAR" />
+    <result column="ICON" property="icon" jdbcType="VARCHAR" />
+    <result column="DISABLED_EXPREE" property="disabledExpree" jdbcType="VARCHAR" />
+    <result column="SHOW_EXPREE" property="showExpree" jdbcType="VARCHAR" />
+    <result column="IPF_FCI_CUSTOM_PROJECT_ID" property="ipfFciCustomProjectId" jdbcType="VARCHAR" />
+    <result column="IS_REFRESH_PARENT_BO" property="isRefreshParentBo" jdbcType="CHAR" />
+    <result column="IPF_FCI_SYSTEM_ID" property="ipfFciSystemId" jdbcType="VARCHAR" />
+    <result column="HOTKEY_TYPE" property="hotkeyType" jdbcType="VARCHAR" />
+    <result column="HOTKEY_VALUE" property="hotkeyValue" jdbcType="VARCHAR" />
+    <result column="IS_CELL_EDITABLE" property="isCellEditable" jdbcType="CHAR" />
+    <result column="ACTIVE_EXPRESS" property="activeExpress" jdbcType="VARCHAR" />
+    <result column="IS_SUM" property="isSum" jdbcType="CHAR" />
+    <result column="GROUP_TOT_TYPE" property="groupTotType" jdbcType="VARCHAR" />
+    <result column="IS_ORDER_BY" property="isOrderBy" jdbcType="VARCHAR" />
+    <result column="IS_SHOW_SORT" property="isShowSort" jdbcType="CHAR" />
+    <result column="LOCK_COLUMN_EXPRESS" property="lockColumnExpress" jdbcType="VARCHAR" />
+    <result column="UNLOCK_COLUMN_EXPRESS" property="unlockColumnExpress" jdbcType="VARCHAR" />
+    <result column="COLUMN_STYLE_EXPRESS" property="columnStyleExpress" jdbcType="VARCHAR" />
+    <result column="IS_DROP_FILTER" property="isDropFilter" jdbcType="CHAR" />
+    <result column="SORT_ORDER" property="sortOrder" jdbcType="DECIMAL" />
+    <result column="STATIC_CONTENT" property="staticContent" jdbcType="VARCHAR" />
+    <result column="FILE_KEY" property="fileKey" jdbcType="VARCHAR" />
+    <result column="ELEMENT_NAME" property="elementName" jdbcType="VARCHAR" />
+    <result column="UI_ATTR" property="uiAttr" jdbcType="VARCHAR" />
+    <result column="PLACEHOLDER" property="placeholder" jdbcType="VARCHAR" />
+    <result column="SEARCH_HELP" property="searchHelp" jdbcType="VARCHAR" />
+    <result column="REF_PRO_NAME" property="refProName" jdbcType="VARCHAR" />
+    <result column="DICT_TABLE_NAME" property="dictTableName" jdbcType="VARCHAR" />
+    <result column="DICT_GROUP_VALUE" property="dictGroupValue" jdbcType="VARCHAR" />
+    <result column="FIELD_TEXT" property="fieldText" jdbcType="VARCHAR" />
+    <result column="UPLOAD_STRATEGY" property="uploadStrategy" jdbcType="VARCHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    IPF_CCM_OR_PG_LO_ELE_ID, DATA_SOURCE_ID, IS_ZERO_FILL, LAYOUT_ELEMENT_ATTR, LABEL_TEXT, 
+    DOMAIN_MODEL, DROPDOWN_LIST, CREATOR, CREATE_OFFICE, CREATE_TIME, CREATE_TIME_ZONE, 
+    LAST_MODIFYOR, LAST_MODIFY_OFFICE, LAST_MODIFY_TIME, LAST_MODIFY_TIME_ZONE, RECORD_VERSION, 
+    PRINCIPAL_GROUP_CODE, IPF_CCM_ORIGIN_PAGE_LAYOUT_ID, CONFIG_ITEM_CODE, REVISION_NUMBER, 
+    BASE_VIEW_ID, SOURCE_REVISION_NUMBER, SEQ_NO, LAYOUT_ELEMENT_TYPE, LAYOUT_ORIGIN_NAME, 
+    CONTROL_HEIGHT, CONTROL_WIDTH, TEXT_LINE_NUM, CONTROL_CONNECTOR, IS_NOT_NULL, IS_READ_ONLY, 
+    UI_TYPE, IS_VISIBLE, COLUMN_STYLE, LABLE_STYLE, IS_SHOW_LABLE, IS_INLINE, TAB_INDEX, 
+    DEFAULT_VALUE, DEFAULT_VALUE2, INIT_VALUE_TYPE, INIT_VALUE_TYPE2, CORRECT_TYPE, CONDITION_TYPE, 
+    OPERATION, QUERY_TYPE, RANGE_TYPE, METHOD_NAME, PROPERTY_NAME, FORMAT_EXPRESS, METHOD_ORIGIN_NAME, 
+    SOURCE_PK_ID, IS_FOCUS, FIELD_VALUE, FIELD_CODE, ICON, DISABLED_EXPREE, SHOW_EXPREE, 
+    IPF_FCI_CUSTOM_PROJECT_ID, IS_REFRESH_PARENT_BO, IPF_FCI_SYSTEM_ID, HOTKEY_TYPE, 
+    HOTKEY_VALUE, IS_CELL_EDITABLE, ACTIVE_EXPRESS, IS_SUM, GROUP_TOT_TYPE, IS_ORDER_BY, 
+    IS_SHOW_SORT, LOCK_COLUMN_EXPRESS, UNLOCK_COLUMN_EXPRESS, COLUMN_STYLE_EXPRESS, IS_DROP_FILTER, 
+    SORT_ORDER, STATIC_CONTENT, FILE_KEY, ELEMENT_NAME, UI_ATTR, PLACEHOLDER, SEARCH_HELP, 
+    REF_PRO_NAME, DICT_TABLE_NAME, DICT_GROUP_VALUE, FIELD_TEXT, UPLOAD_STRATEGY, REMARK
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ipf_ccm_origin_pg_lo_ele
+    where IPF_CCM_OR_PG_LO_ELE_ID = #{ipfCcmOrPgLoEleId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from ipf_ccm_origin_pg_lo_ele
+    where IPF_CCM_OR_PG_LO_ELE_ID = #{ipfCcmOrPgLoEleId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.ljw.springcloud.entity.IpfCcmOriginPgLoEle" >
+    insert into ipf_ccm_origin_pg_lo_ele (IPF_CCM_OR_PG_LO_ELE_ID, DATA_SOURCE_ID, 
+      IS_ZERO_FILL, LAYOUT_ELEMENT_ATTR, LABEL_TEXT, 
+      DOMAIN_MODEL, DROPDOWN_LIST, CREATOR, 
+      CREATE_OFFICE, CREATE_TIME, CREATE_TIME_ZONE, 
+      LAST_MODIFYOR, LAST_MODIFY_OFFICE, LAST_MODIFY_TIME, 
+      LAST_MODIFY_TIME_ZONE, RECORD_VERSION, PRINCIPAL_GROUP_CODE, 
+      IPF_CCM_ORIGIN_PAGE_LAYOUT_ID, CONFIG_ITEM_CODE, 
+      REVISION_NUMBER, BASE_VIEW_ID, SOURCE_REVISION_NUMBER, 
+      SEQ_NO, LAYOUT_ELEMENT_TYPE, LAYOUT_ORIGIN_NAME, 
+      CONTROL_HEIGHT, CONTROL_WIDTH, TEXT_LINE_NUM, 
+      CONTROL_CONNECTOR, IS_NOT_NULL, IS_READ_ONLY, 
+      UI_TYPE, IS_VISIBLE, COLUMN_STYLE, 
+      LABLE_STYLE, IS_SHOW_LABLE, IS_INLINE, 
+      TAB_INDEX, DEFAULT_VALUE, DEFAULT_VALUE2, 
+      INIT_VALUE_TYPE, INIT_VALUE_TYPE2, CORRECT_TYPE, 
+      CONDITION_TYPE, OPERATION, QUERY_TYPE, 
+      RANGE_TYPE, METHOD_NAME, PROPERTY_NAME, 
+      FORMAT_EXPRESS, METHOD_ORIGIN_NAME, SOURCE_PK_ID, 
+      IS_FOCUS, FIELD_VALUE, FIELD_CODE, 
+      ICON, DISABLED_EXPREE, SHOW_EXPREE, 
+      IPF_FCI_CUSTOM_PROJECT_ID, IS_REFRESH_PARENT_BO, 
+      IPF_FCI_SYSTEM_ID, HOTKEY_TYPE, HOTKEY_VALUE, 
+      IS_CELL_EDITABLE, ACTIVE_EXPRESS, IS_SUM, 
+      GROUP_TOT_TYPE, IS_ORDER_BY, IS_SHOW_SORT, 
+      LOCK_COLUMN_EXPRESS, UNLOCK_COLUMN_EXPRESS, 
+      COLUMN_STYLE_EXPRESS, IS_DROP_FILTER, SORT_ORDER, 
+      STATIC_CONTENT, FILE_KEY, ELEMENT_NAME, 
+      UI_ATTR, PLACEHOLDER, SEARCH_HELP, 
+      REF_PRO_NAME, DICT_TABLE_NAME, DICT_GROUP_VALUE, 
+      FIELD_TEXT, UPLOAD_STRATEGY, REMARK
+      )
+    values (#{ipfCcmOrPgLoEleId,jdbcType=VARCHAR}, #{dataSourceId,jdbcType=VARCHAR}, 
+      #{isZeroFill,jdbcType=CHAR}, #{layoutElementAttr,jdbcType=VARCHAR}, #{labelText,jdbcType=VARCHAR}, 
+      #{domainModel,jdbcType=VARCHAR}, #{dropdownList,jdbcType=VARCHAR}, #{creator,jdbcType=VARCHAR}, 
+      #{createOffice,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}, #{createTimeZone,jdbcType=VARCHAR}, 
+      #{lastModifyor,jdbcType=VARCHAR}, #{lastModifyOffice,jdbcType=VARCHAR}, #{lastModifyTime,jdbcType=VARCHAR}, 
+      #{lastModifyTimeZone,jdbcType=VARCHAR}, #{recordVersion,jdbcType=DECIMAL}, #{principalGroupCode,jdbcType=VARCHAR}, 
+      #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR}, #{configItemCode,jdbcType=VARCHAR}, 
+      #{revisionNumber,jdbcType=DECIMAL}, #{baseViewId,jdbcType=VARCHAR}, #{sourceRevisionNumber,jdbcType=DECIMAL}, 
+      #{seqNo,jdbcType=DECIMAL}, #{layoutElementType,jdbcType=VARCHAR}, #{layoutOriginName,jdbcType=VARCHAR}, 
+      #{controlHeight,jdbcType=DECIMAL}, #{controlWidth,jdbcType=DECIMAL}, #{textLineNum,jdbcType=DECIMAL}, 
+      #{controlConnector,jdbcType=VARCHAR}, #{isNotNull,jdbcType=CHAR}, #{isReadOnly,jdbcType=CHAR}, 
+      #{uiType,jdbcType=VARCHAR}, #{isVisible,jdbcType=CHAR}, #{columnStyle,jdbcType=VARCHAR}, 
+      #{lableStyle,jdbcType=VARCHAR}, #{isShowLable,jdbcType=CHAR}, #{isInline,jdbcType=CHAR}, 
+      #{tabIndex,jdbcType=DECIMAL}, #{defaultValue,jdbcType=VARCHAR}, #{defaultValue2,jdbcType=VARCHAR}, 
+      #{initValueType,jdbcType=VARCHAR}, #{initValueType2,jdbcType=VARCHAR}, #{correctType,jdbcType=VARCHAR}, 
+      #{conditionType,jdbcType=VARCHAR}, #{operation,jdbcType=VARCHAR}, #{queryType,jdbcType=VARCHAR}, 
+      #{rangeType,jdbcType=VARCHAR}, #{methodName,jdbcType=VARCHAR}, #{propertyName,jdbcType=VARCHAR}, 
+      #{formatExpress,jdbcType=VARCHAR}, #{methodOriginName,jdbcType=VARCHAR}, #{sourcePkId,jdbcType=VARCHAR}, 
+      #{isFocus,jdbcType=CHAR}, #{fieldValue,jdbcType=VARCHAR}, #{fieldCode,jdbcType=VARCHAR}, 
+      #{icon,jdbcType=VARCHAR}, #{disabledExpree,jdbcType=VARCHAR}, #{showExpree,jdbcType=VARCHAR}, 
+      #{ipfFciCustomProjectId,jdbcType=VARCHAR}, #{isRefreshParentBo,jdbcType=CHAR}, 
+      #{ipfFciSystemId,jdbcType=VARCHAR}, #{hotkeyType,jdbcType=VARCHAR}, #{hotkeyValue,jdbcType=VARCHAR}, 
+      #{isCellEditable,jdbcType=CHAR}, #{activeExpress,jdbcType=VARCHAR}, #{isSum,jdbcType=CHAR}, 
+      #{groupTotType,jdbcType=VARCHAR}, #{isOrderBy,jdbcType=VARCHAR}, #{isShowSort,jdbcType=CHAR}, 
+      #{lockColumnExpress,jdbcType=VARCHAR}, #{unlockColumnExpress,jdbcType=VARCHAR}, 
+      #{columnStyleExpress,jdbcType=VARCHAR}, #{isDropFilter,jdbcType=CHAR}, #{sortOrder,jdbcType=DECIMAL}, 
+      #{staticContent,jdbcType=VARCHAR}, #{fileKey,jdbcType=VARCHAR}, #{elementName,jdbcType=VARCHAR}, 
+      #{uiAttr,jdbcType=VARCHAR}, #{placeholder,jdbcType=VARCHAR}, #{searchHelp,jdbcType=VARCHAR}, 
+      #{refProName,jdbcType=VARCHAR}, #{dictTableName,jdbcType=VARCHAR}, #{dictGroupValue,jdbcType=VARCHAR}, 
+      #{fieldText,jdbcType=VARCHAR}, #{uploadStrategy,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ljw.springcloud.entity.IpfCcmOriginPgLoEle" >
+    insert into ipf_ccm_origin_pg_lo_ele
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ipfCcmOrPgLoEleId != null" >
+        IPF_CCM_OR_PG_LO_ELE_ID,
+      </if>
+      <if test="dataSourceId != null" >
+        DATA_SOURCE_ID,
+      </if>
+      <if test="isZeroFill != null" >
+        IS_ZERO_FILL,
+      </if>
+      <if test="layoutElementAttr != null" >
+        LAYOUT_ELEMENT_ATTR,
+      </if>
+      <if test="labelText != null" >
+        LABEL_TEXT,
+      </if>
+      <if test="domainModel != null" >
+        DOMAIN_MODEL,
+      </if>
+      <if test="dropdownList != null" >
+        DROPDOWN_LIST,
+      </if>
+      <if test="creator != null" >
+        CREATOR,
+      </if>
+      <if test="createOffice != null" >
+        CREATE_OFFICE,
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME,
+      </if>
+      <if test="createTimeZone != null" >
+        CREATE_TIME_ZONE,
+      </if>
+      <if test="lastModifyor != null" >
+        LAST_MODIFYOR,
+      </if>
+      <if test="lastModifyOffice != null" >
+        LAST_MODIFY_OFFICE,
+      </if>
+      <if test="lastModifyTime != null" >
+        LAST_MODIFY_TIME,
+      </if>
+      <if test="lastModifyTimeZone != null" >
+        LAST_MODIFY_TIME_ZONE,
+      </if>
+      <if test="recordVersion != null" >
+        RECORD_VERSION,
+      </if>
+      <if test="principalGroupCode != null" >
+        PRINCIPAL_GROUP_CODE,
+      </if>
+      <if test="ipfCcmOriginPageLayoutId != null" >
+        IPF_CCM_ORIGIN_PAGE_LAYOUT_ID,
+      </if>
+      <if test="configItemCode != null" >
+        CONFIG_ITEM_CODE,
+      </if>
+      <if test="revisionNumber != null" >
+        REVISION_NUMBER,
+      </if>
+      <if test="baseViewId != null" >
+        BASE_VIEW_ID,
+      </if>
+      <if test="sourceRevisionNumber != null" >
+        SOURCE_REVISION_NUMBER,
+      </if>
+      <if test="seqNo != null" >
+        SEQ_NO,
+      </if>
+      <if test="layoutElementType != null" >
+        LAYOUT_ELEMENT_TYPE,
+      </if>
+      <if test="layoutOriginName != null" >
+        LAYOUT_ORIGIN_NAME,
+      </if>
+      <if test="controlHeight != null" >
+        CONTROL_HEIGHT,
+      </if>
+      <if test="controlWidth != null" >
+        CONTROL_WIDTH,
+      </if>
+      <if test="textLineNum != null" >
+        TEXT_LINE_NUM,
+      </if>
+      <if test="controlConnector != null" >
+        CONTROL_CONNECTOR,
+      </if>
+      <if test="isNotNull != null" >
+        IS_NOT_NULL,
+      </if>
+      <if test="isReadOnly != null" >
+        IS_READ_ONLY,
+      </if>
+      <if test="uiType != null" >
+        UI_TYPE,
+      </if>
+      <if test="isVisible != null" >
+        IS_VISIBLE,
+      </if>
+      <if test="columnStyle != null" >
+        COLUMN_STYLE,
+      </if>
+      <if test="lableStyle != null" >
+        LABLE_STYLE,
+      </if>
+      <if test="isShowLable != null" >
+        IS_SHOW_LABLE,
+      </if>
+      <if test="isInline != null" >
+        IS_INLINE,
+      </if>
+      <if test="tabIndex != null" >
+        TAB_INDEX,
+      </if>
+      <if test="defaultValue != null" >
+        DEFAULT_VALUE,
+      </if>
+      <if test="defaultValue2 != null" >
+        DEFAULT_VALUE2,
+      </if>
+      <if test="initValueType != null" >
+        INIT_VALUE_TYPE,
+      </if>
+      <if test="initValueType2 != null" >
+        INIT_VALUE_TYPE2,
+      </if>
+      <if test="correctType != null" >
+        CORRECT_TYPE,
+      </if>
+      <if test="conditionType != null" >
+        CONDITION_TYPE,
+      </if>
+      <if test="operation != null" >
+        OPERATION,
+      </if>
+      <if test="queryType != null" >
+        QUERY_TYPE,
+      </if>
+      <if test="rangeType != null" >
+        RANGE_TYPE,
+      </if>
+      <if test="methodName != null" >
+        METHOD_NAME,
+      </if>
+      <if test="propertyName != null" >
+        PROPERTY_NAME,
+      </if>
+      <if test="formatExpress != null" >
+        FORMAT_EXPRESS,
+      </if>
+      <if test="methodOriginName != null" >
+        METHOD_ORIGIN_NAME,
+      </if>
+      <if test="sourcePkId != null" >
+        SOURCE_PK_ID,
+      </if>
+      <if test="isFocus != null" >
+        IS_FOCUS,
+      </if>
+      <if test="fieldValue != null" >
+        FIELD_VALUE,
+      </if>
+      <if test="fieldCode != null" >
+        FIELD_CODE,
+      </if>
+      <if test="icon != null" >
+        ICON,
+      </if>
+      <if test="disabledExpree != null" >
+        DISABLED_EXPREE,
+      </if>
+      <if test="showExpree != null" >
+        SHOW_EXPREE,
+      </if>
+      <if test="ipfFciCustomProjectId != null" >
+        IPF_FCI_CUSTOM_PROJECT_ID,
+      </if>
+      <if test="isRefreshParentBo != null" >
+        IS_REFRESH_PARENT_BO,
+      </if>
+      <if test="ipfFciSystemId != null" >
+        IPF_FCI_SYSTEM_ID,
+      </if>
+      <if test="hotkeyType != null" >
+        HOTKEY_TYPE,
+      </if>
+      <if test="hotkeyValue != null" >
+        HOTKEY_VALUE,
+      </if>
+      <if test="isCellEditable != null" >
+        IS_CELL_EDITABLE,
+      </if>
+      <if test="activeExpress != null" >
+        ACTIVE_EXPRESS,
+      </if>
+      <if test="isSum != null" >
+        IS_SUM,
+      </if>
+      <if test="groupTotType != null" >
+        GROUP_TOT_TYPE,
+      </if>
+      <if test="isOrderBy != null" >
+        IS_ORDER_BY,
+      </if>
+      <if test="isShowSort != null" >
+        IS_SHOW_SORT,
+      </if>
+      <if test="lockColumnExpress != null" >
+        LOCK_COLUMN_EXPRESS,
+      </if>
+      <if test="unlockColumnExpress != null" >
+        UNLOCK_COLUMN_EXPRESS,
+      </if>
+      <if test="columnStyleExpress != null" >
+        COLUMN_STYLE_EXPRESS,
+      </if>
+      <if test="isDropFilter != null" >
+        IS_DROP_FILTER,
+      </if>
+      <if test="sortOrder != null" >
+        SORT_ORDER,
+      </if>
+      <if test="staticContent != null" >
+        STATIC_CONTENT,
+      </if>
+      <if test="fileKey != null" >
+        FILE_KEY,
+      </if>
+      <if test="elementName != null" >
+        ELEMENT_NAME,
+      </if>
+      <if test="uiAttr != null" >
+        UI_ATTR,
+      </if>
+      <if test="placeholder != null" >
+        PLACEHOLDER,
+      </if>
+      <if test="searchHelp != null" >
+        SEARCH_HELP,
+      </if>
+      <if test="refProName != null" >
+        REF_PRO_NAME,
+      </if>
+      <if test="dictTableName != null" >
+        DICT_TABLE_NAME,
+      </if>
+      <if test="dictGroupValue != null" >
+        DICT_GROUP_VALUE,
+      </if>
+      <if test="fieldText != null" >
+        FIELD_TEXT,
+      </if>
+      <if test="uploadStrategy != null" >
+        UPLOAD_STRATEGY,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ipfCcmOrPgLoEleId != null" >
+        #{ipfCcmOrPgLoEleId,jdbcType=VARCHAR},
+      </if>
+      <if test="dataSourceId != null" >
+        #{dataSourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="isZeroFill != null" >
+        #{isZeroFill,jdbcType=CHAR},
+      </if>
+      <if test="layoutElementAttr != null" >
+        #{layoutElementAttr,jdbcType=VARCHAR},
+      </if>
+      <if test="labelText != null" >
+        #{labelText,jdbcType=VARCHAR},
+      </if>
+      <if test="domainModel != null" >
+        #{domainModel,jdbcType=VARCHAR},
+      </if>
+      <if test="dropdownList != null" >
+        #{dropdownList,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="createOffice != null" >
+        #{createOffice,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="createTimeZone != null" >
+        #{createTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyor != null" >
+        #{lastModifyor,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyOffice != null" >
+        #{lastModifyOffice,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTime != null" >
+        #{lastModifyTime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTimeZone != null" >
+        #{lastModifyTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="recordVersion != null" >
+        #{recordVersion,jdbcType=DECIMAL},
+      </if>
+      <if test="principalGroupCode != null" >
+        #{principalGroupCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfCcmOriginPageLayoutId != null" >
+        #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR},
+      </if>
+      <if test="configItemCode != null" >
+        #{configItemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="revisionNumber != null" >
+        #{revisionNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="baseViewId != null" >
+        #{baseViewId,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceRevisionNumber != null" >
+        #{sourceRevisionNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="seqNo != null" >
+        #{seqNo,jdbcType=DECIMAL},
+      </if>
+      <if test="layoutElementType != null" >
+        #{layoutElementType,jdbcType=VARCHAR},
+      </if>
+      <if test="layoutOriginName != null" >
+        #{layoutOriginName,jdbcType=VARCHAR},
+      </if>
+      <if test="controlHeight != null" >
+        #{controlHeight,jdbcType=DECIMAL},
+      </if>
+      <if test="controlWidth != null" >
+        #{controlWidth,jdbcType=DECIMAL},
+      </if>
+      <if test="textLineNum != null" >
+        #{textLineNum,jdbcType=DECIMAL},
+      </if>
+      <if test="controlConnector != null" >
+        #{controlConnector,jdbcType=VARCHAR},
+      </if>
+      <if test="isNotNull != null" >
+        #{isNotNull,jdbcType=CHAR},
+      </if>
+      <if test="isReadOnly != null" >
+        #{isReadOnly,jdbcType=CHAR},
+      </if>
+      <if test="uiType != null" >
+        #{uiType,jdbcType=VARCHAR},
+      </if>
+      <if test="isVisible != null" >
+        #{isVisible,jdbcType=CHAR},
+      </if>
+      <if test="columnStyle != null" >
+        #{columnStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="lableStyle != null" >
+        #{lableStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="isShowLable != null" >
+        #{isShowLable,jdbcType=CHAR},
+      </if>
+      <if test="isInline != null" >
+        #{isInline,jdbcType=CHAR},
+      </if>
+      <if test="tabIndex != null" >
+        #{tabIndex,jdbcType=DECIMAL},
+      </if>
+      <if test="defaultValue != null" >
+        #{defaultValue,jdbcType=VARCHAR},
+      </if>
+      <if test="defaultValue2 != null" >
+        #{defaultValue2,jdbcType=VARCHAR},
+      </if>
+      <if test="initValueType != null" >
+        #{initValueType,jdbcType=VARCHAR},
+      </if>
+      <if test="initValueType2 != null" >
+        #{initValueType2,jdbcType=VARCHAR},
+      </if>
+      <if test="correctType != null" >
+        #{correctType,jdbcType=VARCHAR},
+      </if>
+      <if test="conditionType != null" >
+        #{conditionType,jdbcType=VARCHAR},
+      </if>
+      <if test="operation != null" >
+        #{operation,jdbcType=VARCHAR},
+      </if>
+      <if test="queryType != null" >
+        #{queryType,jdbcType=VARCHAR},
+      </if>
+      <if test="rangeType != null" >
+        #{rangeType,jdbcType=VARCHAR},
+      </if>
+      <if test="methodName != null" >
+        #{methodName,jdbcType=VARCHAR},
+      </if>
+      <if test="propertyName != null" >
+        #{propertyName,jdbcType=VARCHAR},
+      </if>
+      <if test="formatExpress != null" >
+        #{formatExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="methodOriginName != null" >
+        #{methodOriginName,jdbcType=VARCHAR},
+      </if>
+      <if test="sourcePkId != null" >
+        #{sourcePkId,jdbcType=VARCHAR},
+      </if>
+      <if test="isFocus != null" >
+        #{isFocus,jdbcType=CHAR},
+      </if>
+      <if test="fieldValue != null" >
+        #{fieldValue,jdbcType=VARCHAR},
+      </if>
+      <if test="fieldCode != null" >
+        #{fieldCode,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null" >
+        #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="disabledExpree != null" >
+        #{disabledExpree,jdbcType=VARCHAR},
+      </if>
+      <if test="showExpree != null" >
+        #{showExpree,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfFciCustomProjectId != null" >
+        #{ipfFciCustomProjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="isRefreshParentBo != null" >
+        #{isRefreshParentBo,jdbcType=CHAR},
+      </if>
+      <if test="ipfFciSystemId != null" >
+        #{ipfFciSystemId,jdbcType=VARCHAR},
+      </if>
+      <if test="hotkeyType != null" >
+        #{hotkeyType,jdbcType=VARCHAR},
+      </if>
+      <if test="hotkeyValue != null" >
+        #{hotkeyValue,jdbcType=VARCHAR},
+      </if>
+      <if test="isCellEditable != null" >
+        #{isCellEditable,jdbcType=CHAR},
+      </if>
+      <if test="activeExpress != null" >
+        #{activeExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="isSum != null" >
+        #{isSum,jdbcType=CHAR},
+      </if>
+      <if test="groupTotType != null" >
+        #{groupTotType,jdbcType=VARCHAR},
+      </if>
+      <if test="isOrderBy != null" >
+        #{isOrderBy,jdbcType=VARCHAR},
+      </if>
+      <if test="isShowSort != null" >
+        #{isShowSort,jdbcType=CHAR},
+      </if>
+      <if test="lockColumnExpress != null" >
+        #{lockColumnExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="unlockColumnExpress != null" >
+        #{unlockColumnExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="columnStyleExpress != null" >
+        #{columnStyleExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="isDropFilter != null" >
+        #{isDropFilter,jdbcType=CHAR},
+      </if>
+      <if test="sortOrder != null" >
+        #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="staticContent != null" >
+        #{staticContent,jdbcType=VARCHAR},
+      </if>
+      <if test="fileKey != null" >
+        #{fileKey,jdbcType=VARCHAR},
+      </if>
+      <if test="elementName != null" >
+        #{elementName,jdbcType=VARCHAR},
+      </if>
+      <if test="uiAttr != null" >
+        #{uiAttr,jdbcType=VARCHAR},
+      </if>
+      <if test="placeholder != null" >
+        #{placeholder,jdbcType=VARCHAR},
+      </if>
+      <if test="searchHelp != null" >
+        #{searchHelp,jdbcType=VARCHAR},
+      </if>
+      <if test="refProName != null" >
+        #{refProName,jdbcType=VARCHAR},
+      </if>
+      <if test="dictTableName != null" >
+        #{dictTableName,jdbcType=VARCHAR},
+      </if>
+      <if test="dictGroupValue != null" >
+        #{dictGroupValue,jdbcType=VARCHAR},
+      </if>
+      <if test="fieldText != null" >
+        #{fieldText,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadStrategy != null" >
+        #{uploadStrategy,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ljw.springcloud.entity.IpfCcmOriginPgLoEle" >
+    update ipf_ccm_origin_pg_lo_ele
+    <set >
+      <if test="dataSourceId != null" >
+        DATA_SOURCE_ID = #{dataSourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="isZeroFill != null" >
+        IS_ZERO_FILL = #{isZeroFill,jdbcType=CHAR},
+      </if>
+      <if test="layoutElementAttr != null" >
+        LAYOUT_ELEMENT_ATTR = #{layoutElementAttr,jdbcType=VARCHAR},
+      </if>
+      <if test="labelText != null" >
+        LABEL_TEXT = #{labelText,jdbcType=VARCHAR},
+      </if>
+      <if test="domainModel != null" >
+        DOMAIN_MODEL = #{domainModel,jdbcType=VARCHAR},
+      </if>
+      <if test="dropdownList != null" >
+        DROPDOWN_LIST = #{dropdownList,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null" >
+        CREATOR = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="createOffice != null" >
+        CREATE_OFFICE = #{createOffice,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME = #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="createTimeZone != null" >
+        CREATE_TIME_ZONE = #{createTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyor != null" >
+        LAST_MODIFYOR = #{lastModifyor,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyOffice != null" >
+        LAST_MODIFY_OFFICE = #{lastModifyOffice,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTime != null" >
+        LAST_MODIFY_TIME = #{lastModifyTime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTimeZone != null" >
+        LAST_MODIFY_TIME_ZONE = #{lastModifyTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="recordVersion != null" >
+        RECORD_VERSION = #{recordVersion,jdbcType=DECIMAL},
+      </if>
+      <if test="principalGroupCode != null" >
+        PRINCIPAL_GROUP_CODE = #{principalGroupCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfCcmOriginPageLayoutId != null" >
+        IPF_CCM_ORIGIN_PAGE_LAYOUT_ID = #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR},
+      </if>
+      <if test="configItemCode != null" >
+        CONFIG_ITEM_CODE = #{configItemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="revisionNumber != null" >
+        REVISION_NUMBER = #{revisionNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="baseViewId != null" >
+        BASE_VIEW_ID = #{baseViewId,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceRevisionNumber != null" >
+        SOURCE_REVISION_NUMBER = #{sourceRevisionNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="seqNo != null" >
+        SEQ_NO = #{seqNo,jdbcType=DECIMAL},
+      </if>
+      <if test="layoutElementType != null" >
+        LAYOUT_ELEMENT_TYPE = #{layoutElementType,jdbcType=VARCHAR},
+      </if>
+      <if test="layoutOriginName != null" >
+        LAYOUT_ORIGIN_NAME = #{layoutOriginName,jdbcType=VARCHAR},
+      </if>
+      <if test="controlHeight != null" >
+        CONTROL_HEIGHT = #{controlHeight,jdbcType=DECIMAL},
+      </if>
+      <if test="controlWidth != null" >
+        CONTROL_WIDTH = #{controlWidth,jdbcType=DECIMAL},
+      </if>
+      <if test="textLineNum != null" >
+        TEXT_LINE_NUM = #{textLineNum,jdbcType=DECIMAL},
+      </if>
+      <if test="controlConnector != null" >
+        CONTROL_CONNECTOR = #{controlConnector,jdbcType=VARCHAR},
+      </if>
+      <if test="isNotNull != null" >
+        IS_NOT_NULL = #{isNotNull,jdbcType=CHAR},
+      </if>
+      <if test="isReadOnly != null" >
+        IS_READ_ONLY = #{isReadOnly,jdbcType=CHAR},
+      </if>
+      <if test="uiType != null" >
+        UI_TYPE = #{uiType,jdbcType=VARCHAR},
+      </if>
+      <if test="isVisible != null" >
+        IS_VISIBLE = #{isVisible,jdbcType=CHAR},
+      </if>
+      <if test="columnStyle != null" >
+        COLUMN_STYLE = #{columnStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="lableStyle != null" >
+        LABLE_STYLE = #{lableStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="isShowLable != null" >
+        IS_SHOW_LABLE = #{isShowLable,jdbcType=CHAR},
+      </if>
+      <if test="isInline != null" >
+        IS_INLINE = #{isInline,jdbcType=CHAR},
+      </if>
+      <if test="tabIndex != null" >
+        TAB_INDEX = #{tabIndex,jdbcType=DECIMAL},
+      </if>
+      <if test="defaultValue != null" >
+        DEFAULT_VALUE = #{defaultValue,jdbcType=VARCHAR},
+      </if>
+      <if test="defaultValue2 != null" >
+        DEFAULT_VALUE2 = #{defaultValue2,jdbcType=VARCHAR},
+      </if>
+      <if test="initValueType != null" >
+        INIT_VALUE_TYPE = #{initValueType,jdbcType=VARCHAR},
+      </if>
+      <if test="initValueType2 != null" >
+        INIT_VALUE_TYPE2 = #{initValueType2,jdbcType=VARCHAR},
+      </if>
+      <if test="correctType != null" >
+        CORRECT_TYPE = #{correctType,jdbcType=VARCHAR},
+      </if>
+      <if test="conditionType != null" >
+        CONDITION_TYPE = #{conditionType,jdbcType=VARCHAR},
+      </if>
+      <if test="operation != null" >
+        OPERATION = #{operation,jdbcType=VARCHAR},
+      </if>
+      <if test="queryType != null" >
+        QUERY_TYPE = #{queryType,jdbcType=VARCHAR},
+      </if>
+      <if test="rangeType != null" >
+        RANGE_TYPE = #{rangeType,jdbcType=VARCHAR},
+      </if>
+      <if test="methodName != null" >
+        METHOD_NAME = #{methodName,jdbcType=VARCHAR},
+      </if>
+      <if test="propertyName != null" >
+        PROPERTY_NAME = #{propertyName,jdbcType=VARCHAR},
+      </if>
+      <if test="formatExpress != null" >
+        FORMAT_EXPRESS = #{formatExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="methodOriginName != null" >
+        METHOD_ORIGIN_NAME = #{methodOriginName,jdbcType=VARCHAR},
+      </if>
+      <if test="sourcePkId != null" >
+        SOURCE_PK_ID = #{sourcePkId,jdbcType=VARCHAR},
+      </if>
+      <if test="isFocus != null" >
+        IS_FOCUS = #{isFocus,jdbcType=CHAR},
+      </if>
+      <if test="fieldValue != null" >
+        FIELD_VALUE = #{fieldValue,jdbcType=VARCHAR},
+      </if>
+      <if test="fieldCode != null" >
+        FIELD_CODE = #{fieldCode,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null" >
+        ICON = #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="disabledExpree != null" >
+        DISABLED_EXPREE = #{disabledExpree,jdbcType=VARCHAR},
+      </if>
+      <if test="showExpree != null" >
+        SHOW_EXPREE = #{showExpree,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfFciCustomProjectId != null" >
+        IPF_FCI_CUSTOM_PROJECT_ID = #{ipfFciCustomProjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="isRefreshParentBo != null" >
+        IS_REFRESH_PARENT_BO = #{isRefreshParentBo,jdbcType=CHAR},
+      </if>
+      <if test="ipfFciSystemId != null" >
+        IPF_FCI_SYSTEM_ID = #{ipfFciSystemId,jdbcType=VARCHAR},
+      </if>
+      <if test="hotkeyType != null" >
+        HOTKEY_TYPE = #{hotkeyType,jdbcType=VARCHAR},
+      </if>
+      <if test="hotkeyValue != null" >
+        HOTKEY_VALUE = #{hotkeyValue,jdbcType=VARCHAR},
+      </if>
+      <if test="isCellEditable != null" >
+        IS_CELL_EDITABLE = #{isCellEditable,jdbcType=CHAR},
+      </if>
+      <if test="activeExpress != null" >
+        ACTIVE_EXPRESS = #{activeExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="isSum != null" >
+        IS_SUM = #{isSum,jdbcType=CHAR},
+      </if>
+      <if test="groupTotType != null" >
+        GROUP_TOT_TYPE = #{groupTotType,jdbcType=VARCHAR},
+      </if>
+      <if test="isOrderBy != null" >
+        IS_ORDER_BY = #{isOrderBy,jdbcType=VARCHAR},
+      </if>
+      <if test="isShowSort != null" >
+        IS_SHOW_SORT = #{isShowSort,jdbcType=CHAR},
+      </if>
+      <if test="lockColumnExpress != null" >
+        LOCK_COLUMN_EXPRESS = #{lockColumnExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="unlockColumnExpress != null" >
+        UNLOCK_COLUMN_EXPRESS = #{unlockColumnExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="columnStyleExpress != null" >
+        COLUMN_STYLE_EXPRESS = #{columnStyleExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="isDropFilter != null" >
+        IS_DROP_FILTER = #{isDropFilter,jdbcType=CHAR},
+      </if>
+      <if test="sortOrder != null" >
+        SORT_ORDER = #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="staticContent != null" >
+        STATIC_CONTENT = #{staticContent,jdbcType=VARCHAR},
+      </if>
+      <if test="fileKey != null" >
+        FILE_KEY = #{fileKey,jdbcType=VARCHAR},
+      </if>
+      <if test="elementName != null" >
+        ELEMENT_NAME = #{elementName,jdbcType=VARCHAR},
+      </if>
+      <if test="uiAttr != null" >
+        UI_ATTR = #{uiAttr,jdbcType=VARCHAR},
+      </if>
+      <if test="placeholder != null" >
+        PLACEHOLDER = #{placeholder,jdbcType=VARCHAR},
+      </if>
+      <if test="searchHelp != null" >
+        SEARCH_HELP = #{searchHelp,jdbcType=VARCHAR},
+      </if>
+      <if test="refProName != null" >
+        REF_PRO_NAME = #{refProName,jdbcType=VARCHAR},
+      </if>
+      <if test="dictTableName != null" >
+        DICT_TABLE_NAME = #{dictTableName,jdbcType=VARCHAR},
+      </if>
+      <if test="dictGroupValue != null" >
+        DICT_GROUP_VALUE = #{dictGroupValue,jdbcType=VARCHAR},
+      </if>
+      <if test="fieldText != null" >
+        FIELD_TEXT = #{fieldText,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadStrategy != null" >
+        UPLOAD_STRATEGY = #{uploadStrategy,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where IPF_CCM_OR_PG_LO_ELE_ID = #{ipfCcmOrPgLoEleId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ljw.springcloud.entity.IpfCcmOriginPgLoEle" >
+    update ipf_ccm_origin_pg_lo_ele
+    set DATA_SOURCE_ID = #{dataSourceId,jdbcType=VARCHAR},
+      IS_ZERO_FILL = #{isZeroFill,jdbcType=CHAR},
+      LAYOUT_ELEMENT_ATTR = #{layoutElementAttr,jdbcType=VARCHAR},
+      LABEL_TEXT = #{labelText,jdbcType=VARCHAR},
+      DOMAIN_MODEL = #{domainModel,jdbcType=VARCHAR},
+      DROPDOWN_LIST = #{dropdownList,jdbcType=VARCHAR},
+      CREATOR = #{creator,jdbcType=VARCHAR},
+      CREATE_OFFICE = #{createOffice,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=VARCHAR},
+      CREATE_TIME_ZONE = #{createTimeZone,jdbcType=VARCHAR},
+      LAST_MODIFYOR = #{lastModifyor,jdbcType=VARCHAR},
+      LAST_MODIFY_OFFICE = #{lastModifyOffice,jdbcType=VARCHAR},
+      LAST_MODIFY_TIME = #{lastModifyTime,jdbcType=VARCHAR},
+      LAST_MODIFY_TIME_ZONE = #{lastModifyTimeZone,jdbcType=VARCHAR},
+      RECORD_VERSION = #{recordVersion,jdbcType=DECIMAL},
+      PRINCIPAL_GROUP_CODE = #{principalGroupCode,jdbcType=VARCHAR},
+      IPF_CCM_ORIGIN_PAGE_LAYOUT_ID = #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR},
+      CONFIG_ITEM_CODE = #{configItemCode,jdbcType=VARCHAR},
+      REVISION_NUMBER = #{revisionNumber,jdbcType=DECIMAL},
+      BASE_VIEW_ID = #{baseViewId,jdbcType=VARCHAR},
+      SOURCE_REVISION_NUMBER = #{sourceRevisionNumber,jdbcType=DECIMAL},
+      SEQ_NO = #{seqNo,jdbcType=DECIMAL},
+      LAYOUT_ELEMENT_TYPE = #{layoutElementType,jdbcType=VARCHAR},
+      LAYOUT_ORIGIN_NAME = #{layoutOriginName,jdbcType=VARCHAR},
+      CONTROL_HEIGHT = #{controlHeight,jdbcType=DECIMAL},
+      CONTROL_WIDTH = #{controlWidth,jdbcType=DECIMAL},
+      TEXT_LINE_NUM = #{textLineNum,jdbcType=DECIMAL},
+      CONTROL_CONNECTOR = #{controlConnector,jdbcType=VARCHAR},
+      IS_NOT_NULL = #{isNotNull,jdbcType=CHAR},
+      IS_READ_ONLY = #{isReadOnly,jdbcType=CHAR},
+      UI_TYPE = #{uiType,jdbcType=VARCHAR},
+      IS_VISIBLE = #{isVisible,jdbcType=CHAR},
+      COLUMN_STYLE = #{columnStyle,jdbcType=VARCHAR},
+      LABLE_STYLE = #{lableStyle,jdbcType=VARCHAR},
+      IS_SHOW_LABLE = #{isShowLable,jdbcType=CHAR},
+      IS_INLINE = #{isInline,jdbcType=CHAR},
+      TAB_INDEX = #{tabIndex,jdbcType=DECIMAL},
+      DEFAULT_VALUE = #{defaultValue,jdbcType=VARCHAR},
+      DEFAULT_VALUE2 = #{defaultValue2,jdbcType=VARCHAR},
+      INIT_VALUE_TYPE = #{initValueType,jdbcType=VARCHAR},
+      INIT_VALUE_TYPE2 = #{initValueType2,jdbcType=VARCHAR},
+      CORRECT_TYPE = #{correctType,jdbcType=VARCHAR},
+      CONDITION_TYPE = #{conditionType,jdbcType=VARCHAR},
+      OPERATION = #{operation,jdbcType=VARCHAR},
+      QUERY_TYPE = #{queryType,jdbcType=VARCHAR},
+      RANGE_TYPE = #{rangeType,jdbcType=VARCHAR},
+      METHOD_NAME = #{methodName,jdbcType=VARCHAR},
+      PROPERTY_NAME = #{propertyName,jdbcType=VARCHAR},
+      FORMAT_EXPRESS = #{formatExpress,jdbcType=VARCHAR},
+      METHOD_ORIGIN_NAME = #{methodOriginName,jdbcType=VARCHAR},
+      SOURCE_PK_ID = #{sourcePkId,jdbcType=VARCHAR},
+      IS_FOCUS = #{isFocus,jdbcType=CHAR},
+      FIELD_VALUE = #{fieldValue,jdbcType=VARCHAR},
+      FIELD_CODE = #{fieldCode,jdbcType=VARCHAR},
+      ICON = #{icon,jdbcType=VARCHAR},
+      DISABLED_EXPREE = #{disabledExpree,jdbcType=VARCHAR},
+      SHOW_EXPREE = #{showExpree,jdbcType=VARCHAR},
+      IPF_FCI_CUSTOM_PROJECT_ID = #{ipfFciCustomProjectId,jdbcType=VARCHAR},
+      IS_REFRESH_PARENT_BO = #{isRefreshParentBo,jdbcType=CHAR},
+      IPF_FCI_SYSTEM_ID = #{ipfFciSystemId,jdbcType=VARCHAR},
+      HOTKEY_TYPE = #{hotkeyType,jdbcType=VARCHAR},
+      HOTKEY_VALUE = #{hotkeyValue,jdbcType=VARCHAR},
+      IS_CELL_EDITABLE = #{isCellEditable,jdbcType=CHAR},
+      ACTIVE_EXPRESS = #{activeExpress,jdbcType=VARCHAR},
+      IS_SUM = #{isSum,jdbcType=CHAR},
+      GROUP_TOT_TYPE = #{groupTotType,jdbcType=VARCHAR},
+      IS_ORDER_BY = #{isOrderBy,jdbcType=VARCHAR},
+      IS_SHOW_SORT = #{isShowSort,jdbcType=CHAR},
+      LOCK_COLUMN_EXPRESS = #{lockColumnExpress,jdbcType=VARCHAR},
+      UNLOCK_COLUMN_EXPRESS = #{unlockColumnExpress,jdbcType=VARCHAR},
+      COLUMN_STYLE_EXPRESS = #{columnStyleExpress,jdbcType=VARCHAR},
+      IS_DROP_FILTER = #{isDropFilter,jdbcType=CHAR},
+      SORT_ORDER = #{sortOrder,jdbcType=DECIMAL},
+      STATIC_CONTENT = #{staticContent,jdbcType=VARCHAR},
+      FILE_KEY = #{fileKey,jdbcType=VARCHAR},
+      ELEMENT_NAME = #{elementName,jdbcType=VARCHAR},
+      UI_ATTR = #{uiAttr,jdbcType=VARCHAR},
+      PLACEHOLDER = #{placeholder,jdbcType=VARCHAR},
+      SEARCH_HELP = #{searchHelp,jdbcType=VARCHAR},
+      REF_PRO_NAME = #{refProName,jdbcType=VARCHAR},
+      DICT_TABLE_NAME = #{dictTableName,jdbcType=VARCHAR},
+      DICT_GROUP_VALUE = #{dictGroupValue,jdbcType=VARCHAR},
+      FIELD_TEXT = #{fieldText,jdbcType=VARCHAR},
+      UPLOAD_STRATEGY = #{uploadStrategy,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR}
+    where IPF_CCM_OR_PG_LO_ELE_ID = #{ipfCcmOrPgLoEleId,jdbcType=VARCHAR}
+  </update>
+</mapper>

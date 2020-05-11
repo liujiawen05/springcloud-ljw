@@ -1,6 +1,6 @@
-D:\Project\springcloudProject\cloud-consumer-order80\src\main\java\com\ljw\springcloud\OrderMain80.java
-D:\Project\springcloudProject\cloud-consumer-order80\src\main\java\com\ljw\springcloud\lb\MyLB.java
-D:\Project\springcloudProject\cloud-consumer-order80\src\main\java\com\ljw\springcloud\controller\OrderController.java
-D:\Project\springcloudProject\cloud-consumer-order80\src\main\java\com\ljw\springcloud\config\ApplicationContextConfig.java
-D:\Project\springcloudProject\cloud-consumer-order80\src\main\java\com\ljw\myrule\MySelfRule.java
-D:\Project\springcloudProject\cloud-consumer-order80\src\main\java\com\ljw\springcloud\lb\LoadBalancer.java
+D:\Project\springcloud-ljw\cloud-consumer-order80\src\main\java\com\ljw\myrule\MySelfRule.java
+D:\Project\springcloud-ljw\cloud-consumer-order80\src\main\java\com\ljw\springcloud\lb\LoadBalancer.java
+D:\Project\springcloud-ljw\cloud-consumer-order80\src\main\java\com\ljw\springcloud\OrderMain80.java
+D:\Project\springcloud-ljw\cloud-consumer-order80\src\main\java\com\ljw\springcloud\lb\MyLB.java
+D:\Project\springcloud-ljw\cloud-consumer-order80\src\main\java\com\ljw\springcloud\OrderController.java
+D:\Project\springcloud-ljw\cloud-consumer-order80\src\main\java\com\ljw\springcloud\config\ApplicationContextConfig.java

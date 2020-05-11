@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2020/4/15.
  */
 @RestController
-@RefreshScope
+//@RefreshScope
 public class ConfigClientController {
-    @Value("${config.info}")
-    private String configInfo;
-
-    @GetMapping("/configInfo")
-    public String getConfigInfo(){
-        return configInfo;
-    }
+//    @Value("${config.info}")
+//    private String configInfo;
+//
+//    @GetMapping("/configInfo")
+//    public String getConfigInfo(){
+//        return configInfo;
+//    }
 }

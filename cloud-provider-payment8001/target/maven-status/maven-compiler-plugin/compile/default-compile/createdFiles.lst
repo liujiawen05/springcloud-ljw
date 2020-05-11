@@ -1,5 +1,16 @@
+com\ljw\springcloud\dao\IpfCcmOriginPageMapper.class
 com\ljw\springcloud\controller\PaymentController.class
+com\ljw\springcloud\service\impl\IpfCcmOriginPageServiceImpl.class
+com\ljw\springcloud\service\IpfCcmOriginPageService.class
+com\ljw\springcloud\dao\IpfCcmOriginPgLoEleMapper.class
+com\ljw\springcloud\entity\IpfCcmOriginPage.class
+com\ljw\springcloud\controller\IpfCcmOriginPgLoEleController.class
+com\ljw\springcloud\dao\IpfCcmOriginPageLayoutMapper.class
+com\ljw\springcloud\entity\IpfCcmOriginPageLayout.class
+com\ljw\springcloud\controller\IpfCcmOriginPageController.class
 com\ljw\springcloud\service\PaymentService.class
 com\ljw\springcloud\service\impl\PaymentServiceImpl.class
+com\ljw\springcloud\controller\IpfCcmOriginPageLayoutController.class
+com\ljw\springcloud\entity\IpfCcmOriginPgLoEle.class
 com\ljw\springcloud\PaymentMain8001.class
 com\ljw\springcloud\dao\PaymentDao.class

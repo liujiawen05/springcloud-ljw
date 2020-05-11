@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ljw.springcloud.dao.IpfCcmOriginPageLayoutMapper" >
+  <resultMap id="BaseResultMap" type="com.ljw.springcloud.entity.IpfCcmOriginPageLayout" >
+    <id column="IPF_CCM_ORIGIN_PAGE_LAYOUT_ID" property="ipfCcmOriginPageLayoutId" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE_ID" property="dataSourceId" jdbcType="VARCHAR" />
+    <result column="DOMAIN_MODEL" property="domainModel" jdbcType="VARCHAR" />
+    <result column="DROPDOWN_LIST" property="dropdownList" jdbcType="VARCHAR" />
+    <result column="TABLE_DATA" property="tableData" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="CREATE_OFFICE" property="createOffice" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME_ZONE" property="createTimeZone" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFYOR" property="lastModifyor" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFY_OFFICE" property="lastModifyOffice" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFY_TIME" property="lastModifyTime" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFY_TIME_ZONE" property="lastModifyTimeZone" jdbcType="VARCHAR" />
+    <result column="RECORD_VERSION" property="recordVersion" jdbcType="DECIMAL" />
+    <result column="PRINCIPAL_GROUP_CODE" property="principalGroupCode" jdbcType="VARCHAR" />
+    <result column="IPF_CCM_ORIGIN_PAGE_ID" property="ipfCcmOriginPageId" jdbcType="VARCHAR" />
+    <result column="CONFIG_ITEM_CODE" property="configItemCode" jdbcType="VARCHAR" />
+    <result column="REVISION_NUMBER" property="revisionNumber" jdbcType="DECIMAL" />
+    <result column="BASE_VIEW_ID" property="baseViewId" jdbcType="VARCHAR" />
+    <result column="SOURCE_REVISION_NUMBER" property="sourceRevisionNumber" jdbcType="DECIMAL" />
+    <result column="LAYOUT_TYPE" property="layoutType" jdbcType="VARCHAR" />
+    <result column="LAYOUT_CONTAINER_TYPE" property="layoutContainerType" jdbcType="VARCHAR" />
+    <result column="LAYOUT_ELEMENT_TYPE" property="layoutElementType" jdbcType="VARCHAR" />
+    <result column="LAYOUT_ORIGIN_NAME" property="layoutOriginName" jdbcType="VARCHAR" />
+    <result column="STYLE_CLASS" property="styleClass" jdbcType="VARCHAR" />
+    <result column="STYLE" property="style" jdbcType="VARCHAR" />
+    <result column="FORM_TYPE" property="formType" jdbcType="VARCHAR" />
+    <result column="ELEMENT_NAME" property="elementName" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="DECIMAL" />
+    <result column="IS_SHOW_GROUP" property="isShowGroup" jdbcType="CHAR" />
+    <result column="GROUP_WIDGET" property="groupWidget" jdbcType="VARCHAR" />
+    <result column="GROUP_MSG_CODE" property="groupMsgCode" jdbcType="VARCHAR" />
+    <result column="GROUP_TITLE" property="groupTitle" jdbcType="VARCHAR" />
+    <result column="UNIT_COUNT" property="unitCount" jdbcType="DECIMAL" />
+    <result column="IS_PARENT" property="isParent" jdbcType="CHAR" />
+    <result column="CHILDREN_LINE_COUNT" property="childrenLineCount" jdbcType="DECIMAL" />
+    <result column="CELL_NAME" property="cellName" jdbcType="VARCHAR" />
+    <result column="ROW_NO" property="rowNo" jdbcType="DECIMAL" />
+    <result column="COLUMN_NO" property="columnNo" jdbcType="DECIMAL" />
+    <result column="LABEL_UNIT_COUNT" property="labelUnitCount" jdbcType="DECIMAL" />
+    <result column="SEQ_NO" property="seqNo" jdbcType="DECIMAL" />
+    <result column="CONTROL_CONNECTOR" property="controlConnector" jdbcType="VARCHAR" />
+    <result column="PARENT_CELL_NAME" property="parentCellName" jdbcType="VARCHAR" />
+    <result column="IPF_CCM_ORIGIN_ID" property="ipfCcmOriginId" jdbcType="VARCHAR" />
+    <result column="IS_MAIN_TAB_PANEL" property="isMainTabPanel" jdbcType="CHAR" />
+    <result column="TAB_BUILD_TYPE" property="tabBuildType" jdbcType="VARCHAR" />
+    <result column="TAB_DATA_URL" property="tabDataUrl" jdbcType="VARCHAR" />
+    <result column="SOURCE_PK_ID" property="sourcePkId" jdbcType="VARCHAR" />
+    <result column="IS_DATA_LAZY" property="isDataLazy" jdbcType="CHAR" />
+    <result column="PAGE_LAYOUT_ATTR" property="pageLayoutAttr" jdbcType="VARCHAR" />
+    <result column="ICON" property="icon" jdbcType="VARCHAR" />
+    <result column="TREE_NAME" property="treeName" jdbcType="VARCHAR" />
+    <result column="GRID_TYPE" property="gridType" jdbcType="VARCHAR" />
+    <result column="VALIDATION_GROUP_NAME" property="validationGroupName" jdbcType="VARCHAR" />
+    <result column="IPF_FCI_SYSTEM_ID" property="ipfFciSystemId" jdbcType="VARCHAR" />
+    <result column="VALIDATION_GROUP_DESC" property="validationGroupDesc" jdbcType="VARCHAR" />
+    <result column="GRID_EDIT_TYPE" property="gridEditType" jdbcType="VARCHAR" />
+    <result column="IPF_FCI_CUSTOM_PROJECT_ID" property="ipfFciCustomProjectId" jdbcType="VARCHAR" />
+    <result column="CONDITION_TYPE" property="conditionType" jdbcType="VARCHAR" />
+    <result column="IS_ENABLED_DOUBLE_TO_EDIT" property="isEnabledDoubleToEdit" jdbcType="CHAR" />
+    <result column="IPF_CCM_ORIGIN_PG_LO_ELE_ID" property="ipfCcmOriginPgLoEleId" jdbcType="VARCHAR" />
+    <result column="GRID_STRETCH" property="gridStretch" jdbcType="VARCHAR" />
+    <result column="IS_LAYOUT_DISP_SETTING" property="isLayoutDispSetting" jdbcType="CHAR" />
+    <result column="REFERENCE_ID" property="referenceId" jdbcType="VARCHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    IPF_CCM_ORIGIN_PAGE_LAYOUT_ID, DATA_SOURCE_ID, DOMAIN_MODEL, DROPDOWN_LIST, TABLE_DATA, 
+    CREATOR, CREATE_OFFICE, CREATE_TIME, CREATE_TIME_ZONE, LAST_MODIFYOR, LAST_MODIFY_OFFICE, 
+    LAST_MODIFY_TIME, LAST_MODIFY_TIME_ZONE, RECORD_VERSION, PRINCIPAL_GROUP_CODE, IPF_CCM_ORIGIN_PAGE_ID, 
+    CONFIG_ITEM_CODE, REVISION_NUMBER, BASE_VIEW_ID, SOURCE_REVISION_NUMBER, LAYOUT_TYPE, 
+    LAYOUT_CONTAINER_TYPE, LAYOUT_ELEMENT_TYPE, LAYOUT_ORIGIN_NAME, STYLE_CLASS, STYLE, 
+    FORM_TYPE, ELEMENT_NAME, HEIGHT, IS_SHOW_GROUP, GROUP_WIDGET, GROUP_MSG_CODE, GROUP_TITLE, 
+    UNIT_COUNT, IS_PARENT, CHILDREN_LINE_COUNT, CELL_NAME, ROW_NO, COLUMN_NO, LABEL_UNIT_COUNT, 
+    SEQ_NO, CONTROL_CONNECTOR, PARENT_CELL_NAME, IPF_CCM_ORIGIN_ID, IS_MAIN_TAB_PANEL, 
+    TAB_BUILD_TYPE, TAB_DATA_URL, SOURCE_PK_ID, IS_DATA_LAZY, PAGE_LAYOUT_ATTR, ICON, 
+    TREE_NAME, GRID_TYPE, VALIDATION_GROUP_NAME, IPF_FCI_SYSTEM_ID, VALIDATION_GROUP_DESC, 
+    GRID_EDIT_TYPE, IPF_FCI_CUSTOM_PROJECT_ID, CONDITION_TYPE, IS_ENABLED_DOUBLE_TO_EDIT, 
+    IPF_CCM_ORIGIN_PG_LO_ELE_ID, GRID_STRETCH, IS_LAYOUT_DISP_SETTING, REFERENCE_ID, 
+    REMARK
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ipf_ccm_origin_page_layout
+    where IPF_CCM_ORIGIN_PAGE_LAYOUT_ID = #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from ipf_ccm_origin_page_layout
+    where IPF_CCM_ORIGIN_PAGE_LAYOUT_ID = #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.ljw.springcloud.entity.IpfCcmOriginPageLayout" >
+    insert into ipf_ccm_origin_page_layout (IPF_CCM_ORIGIN_PAGE_LAYOUT_ID, DATA_SOURCE_ID, 
+      DOMAIN_MODEL, DROPDOWN_LIST, TABLE_DATA, 
+      CREATOR, CREATE_OFFICE, CREATE_TIME, 
+      CREATE_TIME_ZONE, LAST_MODIFYOR, LAST_MODIFY_OFFICE, 
+      LAST_MODIFY_TIME, LAST_MODIFY_TIME_ZONE, RECORD_VERSION, 
+      PRINCIPAL_GROUP_CODE, IPF_CCM_ORIGIN_PAGE_ID, 
+      CONFIG_ITEM_CODE, REVISION_NUMBER, BASE_VIEW_ID, 
+      SOURCE_REVISION_NUMBER, LAYOUT_TYPE, LAYOUT_CONTAINER_TYPE, 
+      LAYOUT_ELEMENT_TYPE, LAYOUT_ORIGIN_NAME, STYLE_CLASS, 
+      STYLE, FORM_TYPE, ELEMENT_NAME, 
+      HEIGHT, IS_SHOW_GROUP, GROUP_WIDGET, 
+      GROUP_MSG_CODE, GROUP_TITLE, UNIT_COUNT, 
+      IS_PARENT, CHILDREN_LINE_COUNT, CELL_NAME, 
+      ROW_NO, COLUMN_NO, LABEL_UNIT_COUNT, 
+      SEQ_NO, CONTROL_CONNECTOR, PARENT_CELL_NAME, 
+      IPF_CCM_ORIGIN_ID, IS_MAIN_TAB_PANEL, TAB_BUILD_TYPE, 
+      TAB_DATA_URL, SOURCE_PK_ID, IS_DATA_LAZY, 
+      PAGE_LAYOUT_ATTR, ICON, TREE_NAME, 
+      GRID_TYPE, VALIDATION_GROUP_NAME, IPF_FCI_SYSTEM_ID, 
+      VALIDATION_GROUP_DESC, GRID_EDIT_TYPE, IPF_FCI_CUSTOM_PROJECT_ID, 
+      CONDITION_TYPE, IS_ENABLED_DOUBLE_TO_EDIT, IPF_CCM_ORIGIN_PG_LO_ELE_ID, 
+      GRID_STRETCH, IS_LAYOUT_DISP_SETTING, REFERENCE_ID, 
+      REMARK)
+    values (#{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR}, #{dataSourceId,jdbcType=VARCHAR}, 
+      #{domainModel,jdbcType=VARCHAR}, #{dropdownList,jdbcType=VARCHAR}, #{tableData,jdbcType=VARCHAR}, 
+      #{creator,jdbcType=VARCHAR}, #{createOffice,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}, 
+      #{createTimeZone,jdbcType=VARCHAR}, #{lastModifyor,jdbcType=VARCHAR}, #{lastModifyOffice,jdbcType=VARCHAR}, 
+      #{lastModifyTime,jdbcType=VARCHAR}, #{lastModifyTimeZone,jdbcType=VARCHAR}, #{recordVersion,jdbcType=DECIMAL}, 
+      #{principalGroupCode,jdbcType=VARCHAR}, #{ipfCcmOriginPageId,jdbcType=VARCHAR}, 
+      #{configItemCode,jdbcType=VARCHAR}, #{revisionNumber,jdbcType=DECIMAL}, #{baseViewId,jdbcType=VARCHAR}, 
+      #{sourceRevisionNumber,jdbcType=DECIMAL}, #{layoutType,jdbcType=VARCHAR}, #{layoutContainerType,jdbcType=VARCHAR}, 
+      #{layoutElementType,jdbcType=VARCHAR}, #{layoutOriginName,jdbcType=VARCHAR}, #{styleClass,jdbcType=VARCHAR}, 
+      #{style,jdbcType=VARCHAR}, #{formType,jdbcType=VARCHAR}, #{elementName,jdbcType=VARCHAR}, 
+      #{height,jdbcType=DECIMAL}, #{isShowGroup,jdbcType=CHAR}, #{groupWidget,jdbcType=VARCHAR}, 
+      #{groupMsgCode,jdbcType=VARCHAR}, #{groupTitle,jdbcType=VARCHAR}, #{unitCount,jdbcType=DECIMAL}, 
+      #{isParent,jdbcType=CHAR}, #{childrenLineCount,jdbcType=DECIMAL}, #{cellName,jdbcType=VARCHAR}, 
+      #{rowNo,jdbcType=DECIMAL}, #{columnNo,jdbcType=DECIMAL}, #{labelUnitCount,jdbcType=DECIMAL}, 
+      #{seqNo,jdbcType=DECIMAL}, #{controlConnector,jdbcType=VARCHAR}, #{parentCellName,jdbcType=VARCHAR}, 
+      #{ipfCcmOriginId,jdbcType=VARCHAR}, #{isMainTabPanel,jdbcType=CHAR}, #{tabBuildType,jdbcType=VARCHAR}, 
+      #{tabDataUrl,jdbcType=VARCHAR}, #{sourcePkId,jdbcType=VARCHAR}, #{isDataLazy,jdbcType=CHAR}, 
+      #{pageLayoutAttr,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{treeName,jdbcType=VARCHAR}, 
+      #{gridType,jdbcType=VARCHAR}, #{validationGroupName,jdbcType=VARCHAR}, #{ipfFciSystemId,jdbcType=VARCHAR}, 
+      #{validationGroupDesc,jdbcType=VARCHAR}, #{gridEditType,jdbcType=VARCHAR}, #{ipfFciCustomProjectId,jdbcType=VARCHAR}, 
+      #{conditionType,jdbcType=VARCHAR}, #{isEnabledDoubleToEdit,jdbcType=CHAR}, #{ipfCcmOriginPgLoEleId,jdbcType=VARCHAR}, 
+      #{gridStretch,jdbcType=VARCHAR}, #{isLayoutDispSetting,jdbcType=CHAR}, #{referenceId,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ljw.springcloud.entity.IpfCcmOriginPageLayout" >
+    insert into ipf_ccm_origin_page_layout
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ipfCcmOriginPageLayoutId != null" >
+        IPF_CCM_ORIGIN_PAGE_LAYOUT_ID,
+      </if>
+      <if test="dataSourceId != null" >
+        DATA_SOURCE_ID,
+      </if>
+      <if test="domainModel != null" >
+        DOMAIN_MODEL,
+      </if>
+      <if test="dropdownList != null" >
+        DROPDOWN_LIST,
+      </if>
+      <if test="tableData != null" >
+        TABLE_DATA,
+      </if>
+      <if test="creator != null" >
+        CREATOR,
+      </if>
+      <if test="createOffice != null" >
+        CREATE_OFFICE,
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME,
+      </if>
+      <if test="createTimeZone != null" >
+        CREATE_TIME_ZONE,
+      </if>
+      <if test="lastModifyor != null" >
+        LAST_MODIFYOR,
+      </if>
+      <if test="lastModifyOffice != null" >
+        LAST_MODIFY_OFFICE,
+      </if>
+      <if test="lastModifyTime != null" >
+        LAST_MODIFY_TIME,
+      </if>
+      <if test="lastModifyTimeZone != null" >
+        LAST_MODIFY_TIME_ZONE,
+      </if>
+      <if test="recordVersion != null" >
+        RECORD_VERSION,
+      </if>
+      <if test="principalGroupCode != null" >
+        PRINCIPAL_GROUP_CODE,
+      </if>
+      <if test="ipfCcmOriginPageId != null" >
+        IPF_CCM_ORIGIN_PAGE_ID,
+      </if>
+      <if test="configItemCode != null" >
+        CONFIG_ITEM_CODE,
+      </if>
+      <if test="revisionNumber != null" >
+        REVISION_NUMBER,
+      </if>
+      <if test="baseViewId != null" >
+        BASE_VIEW_ID,
+      </if>
+      <if test="sourceRevisionNumber != null" >
+        SOURCE_REVISION_NUMBER,
+      </if>
+      <if test="layoutType != null" >
+        LAYOUT_TYPE,
+      </if>
+      <if test="layoutContainerType != null" >
+        LAYOUT_CONTAINER_TYPE,
+      </if>
+      <if test="layoutElementType != null" >
+        LAYOUT_ELEMENT_TYPE,
+      </if>
+      <if test="layoutOriginName != null" >
+        LAYOUT_ORIGIN_NAME,
+      </if>
+      <if test="styleClass != null" >
+        STYLE_CLASS,
+      </if>
+      <if test="style != null" >
+        STYLE,
+      </if>
+      <if test="formType != null" >
+        FORM_TYPE,
+      </if>
+      <if test="elementName != null" >
+        ELEMENT_NAME,
+      </if>
+      <if test="height != null" >
+        HEIGHT,
+      </if>
+      <if test="isShowGroup != null" >
+        IS_SHOW_GROUP,
+      </if>
+      <if test="groupWidget != null" >
+        GROUP_WIDGET,
+      </if>
+      <if test="groupMsgCode != null" >
+        GROUP_MSG_CODE,
+      </if>
+      <if test="groupTitle != null" >
+        GROUP_TITLE,
+      </if>
+      <if test="unitCount != null" >
+        UNIT_COUNT,
+      </if>
+      <if test="isParent != null" >
+        IS_PARENT,
+      </if>
+      <if test="childrenLineCount != null" >
+        CHILDREN_LINE_COUNT,
+      </if>
+      <if test="cellName != null" >
+        CELL_NAME,
+      </if>
+      <if test="rowNo != null" >
+        ROW_NO,
+      </if>
+      <if test="columnNo != null" >
+        COLUMN_NO,
+      </if>
+      <if test="labelUnitCount != null" >
+        LABEL_UNIT_COUNT,
+      </if>
+      <if test="seqNo != null" >
+        SEQ_NO,
+      </if>
+      <if test="controlConnector != null" >
+        CONTROL_CONNECTOR,
+      </if>
+      <if test="parentCellName != null" >
+        PARENT_CELL_NAME,
+      </if>
+      <if test="ipfCcmOriginId != null" >
+        IPF_CCM_ORIGIN_ID,
+      </if>
+      <if test="isMainTabPanel != null" >
+        IS_MAIN_TAB_PANEL,
+      </if>
+      <if test="tabBuildType != null" >
+        TAB_BUILD_TYPE,
+      </if>
+      <if test="tabDataUrl != null" >
+        TAB_DATA_URL,
+      </if>
+      <if test="sourcePkId != null" >
+        SOURCE_PK_ID,
+      </if>
+      <if test="isDataLazy != null" >
+        IS_DATA_LAZY,
+      </if>
+      <if test="pageLayoutAttr != null" >
+        PAGE_LAYOUT_ATTR,
+      </if>
+      <if test="icon != null" >
+        ICON,
+      </if>
+      <if test="treeName != null" >
+        TREE_NAME,
+      </if>
+      <if test="gridType != null" >
+        GRID_TYPE,
+      </if>
+      <if test="validationGroupName != null" >
+        VALIDATION_GROUP_NAME,
+      </if>
+      <if test="ipfFciSystemId != null" >
+        IPF_FCI_SYSTEM_ID,
+      </if>
+      <if test="validationGroupDesc != null" >
+        VALIDATION_GROUP_DESC,
+      </if>
+      <if test="gridEditType != null" >
+        GRID_EDIT_TYPE,
+      </if>
+      <if test="ipfFciCustomProjectId != null" >
+        IPF_FCI_CUSTOM_PROJECT_ID,
+      </if>
+      <if test="conditionType != null" >
+        CONDITION_TYPE,
+      </if>
+      <if test="isEnabledDoubleToEdit != null" >
+        IS_ENABLED_DOUBLE_TO_EDIT,
+      </if>
+      <if test="ipfCcmOriginPgLoEleId != null" >
+        IPF_CCM_ORIGIN_PG_LO_ELE_ID,
+      </if>
+      <if test="gridStretch != null" >
+        GRID_STRETCH,
+      </if>
+      <if test="isLayoutDispSetting != null" >
+        IS_LAYOUT_DISP_SETTING,
+      </if>
+      <if test="referenceId != null" >
+        REFERENCE_ID,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ipfCcmOriginPageLayoutId != null" >
+        #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR},
+      </if>
+      <if test="dataSourceId != null" >
+        #{dataSourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="domainModel != null" >
+        #{domainModel,jdbcType=VARCHAR},
+      </if>
+      <if test="dropdownList != null" >
+        #{dropdownList,jdbcType=VARCHAR},
+      </if>
+      <if test="tableData != null" >
+        #{tableData,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="createOffice != null" >
+        #{createOffice,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="createTimeZone != null" >
+        #{createTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyor != null" >
+        #{lastModifyor,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyOffice != null" >
+        #{lastModifyOffice,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTime != null" >
+        #{lastModifyTime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTimeZone != null" >
+        #{lastModifyTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="recordVersion != null" >
+        #{recordVersion,jdbcType=DECIMAL},
+      </if>
+      <if test="principalGroupCode != null" >
+        #{principalGroupCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfCcmOriginPageId != null" >
+        #{ipfCcmOriginPageId,jdbcType=VARCHAR},
+      </if>
+      <if test="configItemCode != null" >
+        #{configItemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="revisionNumber != null" >
+        #{revisionNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="baseViewId != null" >
+        #{baseViewId,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceRevisionNumber != null" >
+        #{sourceRevisionNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="layoutType != null" >
+        #{layoutType,jdbcType=VARCHAR},
+      </if>
+      <if test="layoutContainerType != null" >
+        #{layoutContainerType,jdbcType=VARCHAR},
+      </if>
+      <if test="layoutElementType != null" >
+        #{layoutElementType,jdbcType=VARCHAR},
+      </if>
+      <if test="layoutOriginName != null" >
+        #{layoutOriginName,jdbcType=VARCHAR},
+      </if>
+      <if test="styleClass != null" >
+        #{styleClass,jdbcType=VARCHAR},
+      </if>
+      <if test="style != null" >
+        #{style,jdbcType=VARCHAR},
+      </if>
+      <if test="formType != null" >
+        #{formType,jdbcType=VARCHAR},
+      </if>
+      <if test="elementName != null" >
+        #{elementName,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null" >
+        #{height,jdbcType=DECIMAL},
+      </if>
+      <if test="isShowGroup != null" >
+        #{isShowGroup,jdbcType=CHAR},
+      </if>
+      <if test="groupWidget != null" >
+        #{groupWidget,jdbcType=VARCHAR},
+      </if>
+      <if test="groupMsgCode != null" >
+        #{groupMsgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupTitle != null" >
+        #{groupTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="unitCount != null" >
+        #{unitCount,jdbcType=DECIMAL},
+      </if>
+      <if test="isParent != null" >
+        #{isParent,jdbcType=CHAR},
+      </if>
+      <if test="childrenLineCount != null" >
+        #{childrenLineCount,jdbcType=DECIMAL},
+      </if>
+      <if test="cellName != null" >
+        #{cellName,jdbcType=VARCHAR},
+      </if>
+      <if test="rowNo != null" >
+        #{rowNo,jdbcType=DECIMAL},
+      </if>
+      <if test="columnNo != null" >
+        #{columnNo,jdbcType=DECIMAL},
+      </if>
+      <if test="labelUnitCount != null" >
+        #{labelUnitCount,jdbcType=DECIMAL},
+      </if>
+      <if test="seqNo != null" >
+        #{seqNo,jdbcType=DECIMAL},
+      </if>
+      <if test="controlConnector != null" >
+        #{controlConnector,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCellName != null" >
+        #{parentCellName,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfCcmOriginId != null" >
+        #{ipfCcmOriginId,jdbcType=VARCHAR},
+      </if>
+      <if test="isMainTabPanel != null" >
+        #{isMainTabPanel,jdbcType=CHAR},
+      </if>
+      <if test="tabBuildType != null" >
+        #{tabBuildType,jdbcType=VARCHAR},
+      </if>
+      <if test="tabDataUrl != null" >
+        #{tabDataUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="sourcePkId != null" >
+        #{sourcePkId,jdbcType=VARCHAR},
+      </if>
+      <if test="isDataLazy != null" >
+        #{isDataLazy,jdbcType=CHAR},
+      </if>
+      <if test="pageLayoutAttr != null" >
+        #{pageLayoutAttr,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null" >
+        #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="treeName != null" >
+        #{treeName,jdbcType=VARCHAR},
+      </if>
+      <if test="gridType != null" >
+        #{gridType,jdbcType=VARCHAR},
+      </if>
+      <if test="validationGroupName != null" >
+        #{validationGroupName,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfFciSystemId != null" >
+        #{ipfFciSystemId,jdbcType=VARCHAR},
+      </if>
+      <if test="validationGroupDesc != null" >
+        #{validationGroupDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="gridEditType != null" >
+        #{gridEditType,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfFciCustomProjectId != null" >
+        #{ipfFciCustomProjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="conditionType != null" >
+        #{conditionType,jdbcType=VARCHAR},
+      </if>
+      <if test="isEnabledDoubleToEdit != null" >
+        #{isEnabledDoubleToEdit,jdbcType=CHAR},
+      </if>
+      <if test="ipfCcmOriginPgLoEleId != null" >
+        #{ipfCcmOriginPgLoEleId,jdbcType=VARCHAR},
+      </if>
+      <if test="gridStretch != null" >
+        #{gridStretch,jdbcType=VARCHAR},
+      </if>
+      <if test="isLayoutDispSetting != null" >
+        #{isLayoutDispSetting,jdbcType=CHAR},
+      </if>
+      <if test="referenceId != null" >
+        #{referenceId,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ljw.springcloud.entity.IpfCcmOriginPageLayout" >
+    update ipf_ccm_origin_page_layout
+    <set >
+      <if test="dataSourceId != null" >
+        DATA_SOURCE_ID = #{dataSourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="domainModel != null" >
+        DOMAIN_MODEL = #{domainModel,jdbcType=VARCHAR},
+      </if>
+      <if test="dropdownList != null" >
+        DROPDOWN_LIST = #{dropdownList,jdbcType=VARCHAR},
+      </if>
+      <if test="tableData != null" >
+        TABLE_DATA = #{tableData,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null" >
+        CREATOR = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="createOffice != null" >
+        CREATE_OFFICE = #{createOffice,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME = #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="createTimeZone != null" >
+        CREATE_TIME_ZONE = #{createTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyor != null" >
+        LAST_MODIFYOR = #{lastModifyor,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyOffice != null" >
+        LAST_MODIFY_OFFICE = #{lastModifyOffice,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTime != null" >
+        LAST_MODIFY_TIME = #{lastModifyTime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTimeZone != null" >
+        LAST_MODIFY_TIME_ZONE = #{lastModifyTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="recordVersion != null" >
+        RECORD_VERSION = #{recordVersion,jdbcType=DECIMAL},
+      </if>
+      <if test="principalGroupCode != null" >
+        PRINCIPAL_GROUP_CODE = #{principalGroupCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfCcmOriginPageId != null" >
+        IPF_CCM_ORIGIN_PAGE_ID = #{ipfCcmOriginPageId,jdbcType=VARCHAR},
+      </if>
+      <if test="configItemCode != null" >
+        CONFIG_ITEM_CODE = #{configItemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="revisionNumber != null" >
+        REVISION_NUMBER = #{revisionNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="baseViewId != null" >
+        BASE_VIEW_ID = #{baseViewId,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceRevisionNumber != null" >
+        SOURCE_REVISION_NUMBER = #{sourceRevisionNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="layoutType != null" >
+        LAYOUT_TYPE = #{layoutType,jdbcType=VARCHAR},
+      </if>
+      <if test="layoutContainerType != null" >
+        LAYOUT_CONTAINER_TYPE = #{layoutContainerType,jdbcType=VARCHAR},
+      </if>
+      <if test="layoutElementType != null" >
+        LAYOUT_ELEMENT_TYPE = #{layoutElementType,jdbcType=VARCHAR},
+      </if>
+      <if test="layoutOriginName != null" >
+        LAYOUT_ORIGIN_NAME = #{layoutOriginName,jdbcType=VARCHAR},
+      </if>
+      <if test="styleClass != null" >
+        STYLE_CLASS = #{styleClass,jdbcType=VARCHAR},
+      </if>
+      <if test="style != null" >
+        STYLE = #{style,jdbcType=VARCHAR},
+      </if>
+      <if test="formType != null" >
+        FORM_TYPE = #{formType,jdbcType=VARCHAR},
+      </if>
+      <if test="elementName != null" >
+        ELEMENT_NAME = #{elementName,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null" >
+        HEIGHT = #{height,jdbcType=DECIMAL},
+      </if>
+      <if test="isShowGroup != null" >
+        IS_SHOW_GROUP = #{isShowGroup,jdbcType=CHAR},
+      </if>
+      <if test="groupWidget != null" >
+        GROUP_WIDGET = #{groupWidget,jdbcType=VARCHAR},
+      </if>
+      <if test="groupMsgCode != null" >
+        GROUP_MSG_CODE = #{groupMsgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupTitle != null" >
+        GROUP_TITLE = #{groupTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="unitCount != null" >
+        UNIT_COUNT = #{unitCount,jdbcType=DECIMAL},
+      </if>
+      <if test="isParent != null" >
+        IS_PARENT = #{isParent,jdbcType=CHAR},
+      </if>
+      <if test="childrenLineCount != null" >
+        CHILDREN_LINE_COUNT = #{childrenLineCount,jdbcType=DECIMAL},
+      </if>
+      <if test="cellName != null" >
+        CELL_NAME = #{cellName,jdbcType=VARCHAR},
+      </if>
+      <if test="rowNo != null" >
+        ROW_NO = #{rowNo,jdbcType=DECIMAL},
+      </if>
+      <if test="columnNo != null" >
+        COLUMN_NO = #{columnNo,jdbcType=DECIMAL},
+      </if>
+      <if test="labelUnitCount != null" >
+        LABEL_UNIT_COUNT = #{labelUnitCount,jdbcType=DECIMAL},
+      </if>
+      <if test="seqNo != null" >
+        SEQ_NO = #{seqNo,jdbcType=DECIMAL},
+      </if>
+      <if test="controlConnector != null" >
+        CONTROL_CONNECTOR = #{controlConnector,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCellName != null" >
+        PARENT_CELL_NAME = #{parentCellName,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfCcmOriginId != null" >
+        IPF_CCM_ORIGIN_ID = #{ipfCcmOriginId,jdbcType=VARCHAR},
+      </if>
+      <if test="isMainTabPanel != null" >
+        IS_MAIN_TAB_PANEL = #{isMainTabPanel,jdbcType=CHAR},
+      </if>
+      <if test="tabBuildType != null" >
+        TAB_BUILD_TYPE = #{tabBuildType,jdbcType=VARCHAR},
+      </if>
+      <if test="tabDataUrl != null" >
+        TAB_DATA_URL = #{tabDataUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="sourcePkId != null" >
+        SOURCE_PK_ID = #{sourcePkId,jdbcType=VARCHAR},
+      </if>
+      <if test="isDataLazy != null" >
+        IS_DATA_LAZY = #{isDataLazy,jdbcType=CHAR},
+      </if>
+      <if test="pageLayoutAttr != null" >
+        PAGE_LAYOUT_ATTR = #{pageLayoutAttr,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null" >
+        ICON = #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="treeName != null" >
+        TREE_NAME = #{treeName,jdbcType=VARCHAR},
+      </if>
+      <if test="gridType != null" >
+        GRID_TYPE = #{gridType,jdbcType=VARCHAR},
+      </if>
+      <if test="validationGroupName != null" >
+        VALIDATION_GROUP_NAME = #{validationGroupName,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfFciSystemId != null" >
+        IPF_FCI_SYSTEM_ID = #{ipfFciSystemId,jdbcType=VARCHAR},
+      </if>
+      <if test="validationGroupDesc != null" >
+        VALIDATION_GROUP_DESC = #{validationGroupDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="gridEditType != null" >
+        GRID_EDIT_TYPE = #{gridEditType,jdbcType=VARCHAR},
+      </if>
+      <if test="ipfFciCustomProjectId != null" >
+        IPF_FCI_CUSTOM_PROJECT_ID = #{ipfFciCustomProjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="conditionType != null" >
+        CONDITION_TYPE = #{conditionType,jdbcType=VARCHAR},
+      </if>
+      <if test="isEnabledDoubleToEdit != null" >
+        IS_ENABLED_DOUBLE_TO_EDIT = #{isEnabledDoubleToEdit,jdbcType=CHAR},
+      </if>
+      <if test="ipfCcmOriginPgLoEleId != null" >
+        IPF_CCM_ORIGIN_PG_LO_ELE_ID = #{ipfCcmOriginPgLoEleId,jdbcType=VARCHAR},
+      </if>
+      <if test="gridStretch != null" >
+        GRID_STRETCH = #{gridStretch,jdbcType=VARCHAR},
+      </if>
+      <if test="isLayoutDispSetting != null" >
+        IS_LAYOUT_DISP_SETTING = #{isLayoutDispSetting,jdbcType=CHAR},
+      </if>
+      <if test="referenceId != null" >
+        REFERENCE_ID = #{referenceId,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where IPF_CCM_ORIGIN_PAGE_LAYOUT_ID = #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ljw.springcloud.entity.IpfCcmOriginPageLayout" >
+    update ipf_ccm_origin_page_layout
+    set DATA_SOURCE_ID = #{dataSourceId,jdbcType=VARCHAR},
+      DOMAIN_MODEL = #{domainModel,jdbcType=VARCHAR},
+      DROPDOWN_LIST = #{dropdownList,jdbcType=VARCHAR},
+      TABLE_DATA = #{tableData,jdbcType=VARCHAR},
+      CREATOR = #{creator,jdbcType=VARCHAR},
+      CREATE_OFFICE = #{createOffice,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=VARCHAR},
+      CREATE_TIME_ZONE = #{createTimeZone,jdbcType=VARCHAR},
+      LAST_MODIFYOR = #{lastModifyor,jdbcType=VARCHAR},
+      LAST_MODIFY_OFFICE = #{lastModifyOffice,jdbcType=VARCHAR},
+      LAST_MODIFY_TIME = #{lastModifyTime,jdbcType=VARCHAR},
+      LAST_MODIFY_TIME_ZONE = #{lastModifyTimeZone,jdbcType=VARCHAR},
+      RECORD_VERSION = #{recordVersion,jdbcType=DECIMAL},
+      PRINCIPAL_GROUP_CODE = #{principalGroupCode,jdbcType=VARCHAR},
+      IPF_CCM_ORIGIN_PAGE_ID = #{ipfCcmOriginPageId,jdbcType=VARCHAR},
+      CONFIG_ITEM_CODE = #{configItemCode,jdbcType=VARCHAR},
+      REVISION_NUMBER = #{revisionNumber,jdbcType=DECIMAL},
+      BASE_VIEW_ID = #{baseViewId,jdbcType=VARCHAR},
+      SOURCE_REVISION_NUMBER = #{sourceRevisionNumber,jdbcType=DECIMAL},
+      LAYOUT_TYPE = #{layoutType,jdbcType=VARCHAR},
+      LAYOUT_CONTAINER_TYPE = #{layoutContainerType,jdbcType=VARCHAR},
+      LAYOUT_ELEMENT_TYPE = #{layoutElementType,jdbcType=VARCHAR},
+      LAYOUT_ORIGIN_NAME = #{layoutOriginName,jdbcType=VARCHAR},
+      STYLE_CLASS = #{styleClass,jdbcType=VARCHAR},
+      STYLE = #{style,jdbcType=VARCHAR},
+      FORM_TYPE = #{formType,jdbcType=VARCHAR},
+      ELEMENT_NAME = #{elementName,jdbcType=VARCHAR},
+      HEIGHT = #{height,jdbcType=DECIMAL},
+      IS_SHOW_GROUP = #{isShowGroup,jdbcType=CHAR},
+      GROUP_WIDGET = #{groupWidget,jdbcType=VARCHAR},
+      GROUP_MSG_CODE = #{groupMsgCode,jdbcType=VARCHAR},
+      GROUP_TITLE = #{groupTitle,jdbcType=VARCHAR},
+      UNIT_COUNT = #{unitCount,jdbcType=DECIMAL},
+      IS_PARENT = #{isParent,jdbcType=CHAR},
+      CHILDREN_LINE_COUNT = #{childrenLineCount,jdbcType=DECIMAL},
+      CELL_NAME = #{cellName,jdbcType=VARCHAR},
+      ROW_NO = #{rowNo,jdbcType=DECIMAL},
+      COLUMN_NO = #{columnNo,jdbcType=DECIMAL},
+      LABEL_UNIT_COUNT = #{labelUnitCount,jdbcType=DECIMAL},
+      SEQ_NO = #{seqNo,jdbcType=DECIMAL},
+      CONTROL_CONNECTOR = #{controlConnector,jdbcType=VARCHAR},
+      PARENT_CELL_NAME = #{parentCellName,jdbcType=VARCHAR},
+      IPF_CCM_ORIGIN_ID = #{ipfCcmOriginId,jdbcType=VARCHAR},
+      IS_MAIN_TAB_PANEL = #{isMainTabPanel,jdbcType=CHAR},
+      TAB_BUILD_TYPE = #{tabBuildType,jdbcType=VARCHAR},
+      TAB_DATA_URL = #{tabDataUrl,jdbcType=VARCHAR},
+      SOURCE_PK_ID = #{sourcePkId,jdbcType=VARCHAR},
+      IS_DATA_LAZY = #{isDataLazy,jdbcType=CHAR},
+      PAGE_LAYOUT_ATTR = #{pageLayoutAttr,jdbcType=VARCHAR},
+      ICON = #{icon,jdbcType=VARCHAR},
+      TREE_NAME = #{treeName,jdbcType=VARCHAR},
+      GRID_TYPE = #{gridType,jdbcType=VARCHAR},
+      VALIDATION_GROUP_NAME = #{validationGroupName,jdbcType=VARCHAR},
+      IPF_FCI_SYSTEM_ID = #{ipfFciSystemId,jdbcType=VARCHAR},
+      VALIDATION_GROUP_DESC = #{validationGroupDesc,jdbcType=VARCHAR},
+      GRID_EDIT_TYPE = #{gridEditType,jdbcType=VARCHAR},
+      IPF_FCI_CUSTOM_PROJECT_ID = #{ipfFciCustomProjectId,jdbcType=VARCHAR},
+      CONDITION_TYPE = #{conditionType,jdbcType=VARCHAR},
+      IS_ENABLED_DOUBLE_TO_EDIT = #{isEnabledDoubleToEdit,jdbcType=CHAR},
+      IPF_CCM_ORIGIN_PG_LO_ELE_ID = #{ipfCcmOriginPgLoEleId,jdbcType=VARCHAR},
+      GRID_STRETCH = #{gridStretch,jdbcType=VARCHAR},
+      IS_LAYOUT_DISP_SETTING = #{isLayoutDispSetting,jdbcType=CHAR},
+      REFERENCE_ID = #{referenceId,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR}
+    where IPF_CCM_ORIGIN_PAGE_LAYOUT_ID = #{ipfCcmOriginPageLayoutId,jdbcType=VARCHAR}
+  </update>
+</mapper>
