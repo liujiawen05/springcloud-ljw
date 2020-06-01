@@ -19,6 +19,11 @@ public class IpfCcmOriginPageLayoutServiceImpl implements IpfCcmOriginPageLayout
     private IpfCcmOriginPageLayoutMapper ipfCcmOriginPageLayoutMapper;
 
     @Override
+    public void selectByTest(String id) {
+        System.out.println("测试测试"+id);
+    }
+
+    @Override
     public IpfCcmOriginPageLayout getPaymentById(String id) {
         return ipfCcmOriginPageLayoutMapper.selectByPrimaryKey(id);
     }

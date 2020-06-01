@@ -9,6 +9,8 @@ import com.ljw.springcloud.entity.IpfCcmOriginPageLayout;
  */
 public interface IpfCcmOriginPageLayoutService {
 
+    void selectByTest(String id);
+
     IpfCcmOriginPageLayout getPaymentById(String id);
 
     void insert(IpfCcmOriginPageLayout ipfCcmOriginPage);

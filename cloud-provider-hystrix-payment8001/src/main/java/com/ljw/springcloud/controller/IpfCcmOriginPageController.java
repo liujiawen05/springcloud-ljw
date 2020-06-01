@@ -3,8 +3,8 @@ package com.ljw.springcloud.controller;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.ljw.springcloud.entity.IpfCcmOriginPage;
-import com.ljw.springcloud.service.IpfCcmOriginPageService;
-import com.ljw.springcloud.service.PaymentService;
+import com.ljw.springcloud.IpfCcmOriginPageService;
+import com.ljw.springcloud.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 

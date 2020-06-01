@@ -1,8 +1,8 @@
-package com.ljw.springcloud.service.impl;
+package com.ljw.springcloud.service;
 
 import com.ljw.springcloud.dao.IpfCcmOriginPageMapper;
 import com.ljw.springcloud.entity.IpfCcmOriginPage;
-import com.ljw.springcloud.service.IpfCcmOriginPageService;
+import com.ljw.springcloud.IpfCcmOriginPageService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

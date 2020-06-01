@@ -1,8 +1,12 @@
 D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\dao\IpfCcmOriginPgLoEleMapper.java
 D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\entity\IpfCcmOriginPageLayout.java
+D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\service\impl\IpfCcmOriginPageLayoutServiceImpl.java
 D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\service\impl\IpfCcmOriginPageServiceImpl.java
+D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\service\impl\IpfCcmOriginPgLoEleServiceImpl.java
 D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\service\IpfCcmOriginPageService.java
+D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\service\IpfCcmOriginPgLoEleService.java
 D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\PaymentMain8001.java
+D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\service\IpfCcmOriginPageLayoutService.java
 D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\service\PaymentService.java
 D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\controller\IpfCcmOriginPgLoEleController.java
 D:\Project\springcloud-ljw\cloud-provider-payment8001\src\main\java\com\ljw\springcloud\entity\IpfCcmOriginPgLoEle.java

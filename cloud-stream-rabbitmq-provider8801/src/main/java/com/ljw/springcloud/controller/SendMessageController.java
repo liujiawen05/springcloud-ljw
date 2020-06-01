@@ -1,6 +1,6 @@
 package com.ljw.springcloud.controller;
 
-import com.ljw.springcloud.service.IMessageProvider;
+import com.ljw.springcloud.IMessageProvider;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

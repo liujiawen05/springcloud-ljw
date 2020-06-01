@@ -3,6 +3,8 @@ package com.ljw.springcloud.service.impl;
 import com.ljw.springcloud.dao.IpfCcmOriginPageMapper;
 import com.ljw.springcloud.entity.IpfCcmOriginPage;
 import com.ljw.springcloud.service.IpfCcmOriginPageService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -19,8 +21,27 @@ public class IpfCcmOriginPageServiceImpl implements IpfCcmOriginPageService {
     private IpfCcmOriginPageMapper ipfCcmOriginPageMapper;
 
     @Override
+    @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler",commandProperties = {
+            @HystrixProperty(name="circuitBreaker.enable",value = "true"),
+            @HystrixProperty(name="circuitBreaker.requestVolumeThreshold",value = "10"),
+            @HystrixProperty(name="circuitBreaker.sleepWindowInMilliseconds",value = "10000"),
+            @HystrixProperty(name="circuitBreaker.errorThresholdPercentage",value = "60"),
+    })
     public IpfCcmOriginPage getPaymentById(String id) {
+//        int timeNumber = 3;
+//        try {
+//            TimeUnit.SECONDS.sleep(timeNumber);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        System.out.println("222");
         return ipfCcmOriginPageMapper.selectByPrimaryKey(id);
+    }
+
+    public IpfCcmOriginPage paymentInfo_TimeOutHandler(String id){
+        String str = "线程池:" + Thread.currentThread().getName() + " 8002系统繁忙请稍后再试！！,id:" + id + "\t"+"。。。！！";
+        System.out.println(str);
+        return null;
     }
 
     @Override

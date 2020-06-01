@@ -1,6 +1,6 @@
-package com.ljw.springcloud.service.Impl;
+package com.ljw.springcloud.Impl;
 
-import com.ljw.springcloud.service.IMessageProvider;
+import com.ljw.springcloud.IMessageProvider;
 
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;

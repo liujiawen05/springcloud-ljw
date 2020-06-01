@@ -2,9 +2,7 @@ package com.ljw.springcloud.controller;
 
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import com.ljw.springcloud.entity.IpfCcmOriginPageLayout;
 import com.ljw.springcloud.entity.IpfCcmOriginPgLoEle;
-import com.ljw.springcloud.service.IpfCcmOriginPageLayoutService;
 import com.ljw.springcloud.service.IpfCcmOriginPgLoEleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

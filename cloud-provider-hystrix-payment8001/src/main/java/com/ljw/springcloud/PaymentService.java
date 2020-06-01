@@ -1,4 +1,4 @@
-package com.ljw.springcloud.service;
+package com.ljw.springcloud;
 
 import cn.hutool.core.util.IdUtil;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;

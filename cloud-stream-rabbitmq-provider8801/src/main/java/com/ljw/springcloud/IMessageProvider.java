@@ -1,4 +1,4 @@
-package com.ljw.springcloud.service;
+package com.ljw.springcloud;
 
 /**
  * @Description:

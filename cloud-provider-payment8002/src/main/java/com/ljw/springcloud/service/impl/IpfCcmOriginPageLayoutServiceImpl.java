@@ -3,7 +3,6 @@ package com.ljw.springcloud.service.impl;
 import com.ljw.springcloud.dao.IpfCcmOriginPageLayoutMapper;
 import com.ljw.springcloud.entity.IpfCcmOriginPageLayout;
 import com.ljw.springcloud.service.IpfCcmOriginPageLayoutService;
-import com.ljw.springcloud.service.IpfCcmOriginPgLoEleService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

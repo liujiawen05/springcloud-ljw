@@ -1,8 +1,6 @@
-package com.ljw.springcloud.service;
+package com.ljw.springcloud;
 
-import com.ljw.springcloud.entity.CommonResult;
-import com.ljw.springcloud.entity.IpfCcmOriginPage;
-import com.ljw.springcloud.entity.Payment;
+import com.ljw.springcloud.entity.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,5 +24,11 @@ public interface PaymentFeignService {
 
     @RequestMapping(value = "/ipfCcmOriginPage/get")
     public IpfCcmOriginPage getPage(@RequestBody String json);
+
+    @RequestMapping(value = "/ipfCcmOriginPageLayout/get")
+    public IpfCcmOriginPageLayout getPageLayout(@RequestBody String json);
+
+    @RequestMapping(value = "/ipfCcmOriginPgLoEle/get")
+    public IpfCcmOriginPgLoEle getPageLayoutElement(@RequestBody String json);
 
 }
