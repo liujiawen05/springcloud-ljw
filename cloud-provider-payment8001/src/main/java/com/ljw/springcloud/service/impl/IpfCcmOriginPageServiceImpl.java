@@ -47,7 +47,7 @@ public class IpfCcmOriginPageServiceImpl implements IpfCcmOriginPageService {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-        System.out.println("111");
+        System.out.println("222");
 
         for(int i =0;i<10;i++){
             rabbitTemplate.convertAndSend(topicExchange,topicRoutingKey, "title.toJSONString()----"+i);
