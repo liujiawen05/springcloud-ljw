@@ -17,7 +17,7 @@ import org.springframework.context.annotation.PropertySource;
  * @Date: 2020/5/26.
  */
 @Configuration
-@PropertySource("classPath:rabbitMqConfig.properti")
+@PropertySource("classpath:rabbitMqConfig.properties")
 public class RabbitConfig {
 
     @Value("${com.ljw.firstqueue}")
@@ -79,8 +79,13 @@ public class RabbitConfig {
     }
 
     // 定义四个绑定关系
+//    @Bean
+//    public Binding bindFirst(@Qualifier("vipFirstQueue") Queue queue, @Qualifier("vipDirectExchange") DirectExchange exchange){
+//        return BindingBuilder.bind(queue).to(exchange).with("gupao.best");
+//    }
+
     @Bean
-    public Binding bindFirst(@Qualifier("vipFirstQueue") Queue queue, @Qualifier("vipDirectExchange") DirectExchange exchange){
+    public Binding bindFirst(@Qualifier("vipFirstQueue") Queue queue, @Qualifier("vipTopicExchange") TopicExchange exchange){
         return BindingBuilder.bind(queue).to(exchange).with("gupao.best");
     }
 
@@ -90,11 +95,12 @@ public class RabbitConfig {
     }
 
     @Bean
-    public Binding bindThird(@Qualifier("vipThirdQueue") Queue queue, @Qualifier("vipFanoutExchange") FanoutExchange exchange){
-        return BindingBuilder.bind(queue).to(exchange);
+    public Binding bindThird(@Qualifier("vipThirdQueue") Queue queue, @Qualifier("vipTopicExchange") TopicExchange exchange){
+//        return BindingBuilder.bind(queue).to(exchange);
+        return BindingBuilder.bind(queue).to(exchange).with("*.gupao.*");
     }
 
-    public Binding bindFourth(@Qualifier("vipFourthQueue") Queue queue,@Qualifier("vipFanoutExchange") FanoutExchange exchange){
+    public Binding bindFourth(@Qualifier("vipFourthQueue") Queue queue,@Qualifier("vipTopicExchange") FanoutExchange exchange){
         return BindingBuilder.bind(queue).to(exchange);
     }
 

@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Payment {
 
+    //测试加注释
     private Long id;
 
     private String serial;

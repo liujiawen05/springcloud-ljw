@@ -49,7 +49,9 @@ public class IpfCcmOriginPageServiceImpl implements IpfCcmOriginPageService {
 //        }
         System.out.println("111");
 
-        rabbitTemplate.convertAndSend(topicExchange,topicRoutingKey, "title.toJSONString()");
+        for(int i =0;i<10;i++){
+            rabbitTemplate.convertAndSend(topicExchange,topicRoutingKey, "title.toJSONString()----"+i);
+        }
 
         return ipfCcmOriginPageMapper.selectByPrimaryKey(id);
     }

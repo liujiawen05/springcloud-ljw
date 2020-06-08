@@ -16,3 +16,15 @@ logging:
   level:
     # feign日志以什么级别监控哪个接口
     com.atguigu.springcloud.service.PaymentFeignService: debug
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: /
+    username: guest
+    password: guest
+    listener:
+      direct:
+        acknowledge-mode=manual: manual
+      simple:
+        acknowledge-mode=manual: manual
